@@ -8,17 +8,19 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>胡贵冬的笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="给初学者的建议 先说下JavaWeb后台服务器,JavaWeb后台服务器主要做的事情其实就是从用户那里接收到数据,然后按照需求,经过一系列逻辑处理存储将数据存储到数据库,或者是按照需求从数据库中取出数据并进行处理后展示到前台页面.由此可见采用Java语言做到与数据库之间的交互是非常重要的,而JDBC是Java为了操作数据库定义的一套规范.就包括之后要学的Hibernate框架以及Mybatis框架">
+  <meta name="description" content="第三章HTTP HTTP简介什么是HTTP？超文本传输协议（Hypertext Transfer Protocol，HTTP）是一个简单的请求-响应协议，它通常运行在TCP之上。它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应。 涉及知识点 TCP协议 按层次分，TCP位于传输层，提供可靠的字节流服务。  字节流服务是指，为了方便传输，将大块数据分割成以报文段为单位的数据包进行管理。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="胡贵冬的笔记">
-<meta property="og:url" content="http://example.com/2021/06/07/JavawebNote/JDBC%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/index.html">
+<meta property="og:url" content="http://example.com/2021/06/08/%E7%AC%AC%E4%B8%89%E7%AB%A0HTTP/index.html">
 <meta property="og:site_name" content="胡贵冬的笔记">
-<meta property="og:description" content="给初学者的建议 先说下JavaWeb后台服务器,JavaWeb后台服务器主要做的事情其实就是从用户那里接收到数据,然后按照需求,经过一系列逻辑处理存储将数据存储到数据库,或者是按照需求从数据库中取出数据并进行处理后展示到前台页面.由此可见采用Java语言做到与数据库之间的交互是非常重要的,而JDBC是Java为了操作数据库定义的一套规范.就包括之后要学的Hibernate框架以及Mybatis框架">
+<meta property="og:description" content="第三章HTTP HTTP简介什么是HTTP？超文本传输协议（Hypertext Transfer Protocol，HTTP）是一个简单的请求-响应协议，它通常运行在TCP之上。它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应。 涉及知识点 TCP协议 按层次分，TCP位于传输层，提供可靠的字节流服务。  字节流服务是指，为了方便传输，将大块数据分割成以报文段为单位的数据包进行管理。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-06-07T02:02:33.459Z">
-<meta property="article:modified_time" content="2021-06-07T02:02:33.459Z">
+<meta property="og:image" content="http://example.com/2021/06/08/%E7%AC%AC%E4%B8%89%E7%AB%A0HTTP/%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png">
+<meta property="article:published_time" content="2021-06-08T14:48:24.350Z">
+<meta property="article:modified_time" content="2021-06-08T14:48:24.350Z">
 <meta property="article:author" content="胡贵冬">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/06/08/%E7%AC%AC%E4%B8%89%E7%AB%A0HTTP/%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png">
   
     <link rel="alternative" href="/atom.xml" title="胡贵冬的笔记" type="application/atom+xml">
   
@@ -154,69 +156,45 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JavawebNote/JDBC核心知识点汇总" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-第三章HTTP" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="给初学者的建议"><a href="#给初学者的建议" class="headerlink" title="给初学者的建议"></a>给初学者的建议</h3><ul>
-<li>先说下JavaWeb后台服务器,JavaWeb后台服务器主要做的事情其实就是从用户那里接收到数据,然后按照需求,经过一系列逻辑处理存储将数据存储到数据库,或者是按照需求从数据库中取出数据并进行处理后展示到前台页面.由此可见采用Java语言做到与数据库之间的交互是非常重要的,而JDBC是Java为了操作数据库定义的一套规范.就包括之后要学的Hibernate框架以及Mybatis框架都是在JDBC的基础上再次进行封装的,可以说要想通过Java去操作数据库,必须用到JDBC规范,因此理解并掌握JDBC相关知识是至关重要的.</li>
+        <h1 id="第三章HTTP"><a href="#第三章HTTP" class="headerlink" title="第三章HTTP"></a>第三章HTTP</h1><p><img src="/2021/06/08/%E7%AC%AC%E4%B8%89%E7%AB%A0HTTP/%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png" alt="思维导图"></p>
+<h2 id="HTTP简介"><a href="#HTTP简介" class="headerlink" title="HTTP简介"></a>HTTP简介</h2><h3 id="什么是HTTP？"><a href="#什么是HTTP？" class="headerlink" title="什么是HTTP？"></a>什么是HTTP？</h3><p>超文本传输协议（Hypertext Transfer Protocol，HTTP）是一个简单的请求-响应协议，它通常运行在TCP之上。它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应。</p>
+<h3 id="涉及知识点"><a href="#涉及知识点" class="headerlink" title="涉及知识点"></a>涉及知识点</h3><ul>
+<li><p>TCP协议</p>
+<p>按层次分，TCP位于传输层，提供可靠的字节流服务。</p>
+<ul>
+<li>字节流服务是指，为了方便传输，将大块数据分割成以报文段为单位的数据包进行管理。</li>
+<li>可靠的传输服务是指，能够把数据准确可靠地传给对方。</li>
+<li>TCP协议采用了三次握手策略来保证准确无误地将数据送达目标处。</li>
+<li>三次握手：发送端首先发送一个带SYN标志的数据包给对方，接收端收到后，回传一个带有SYN/ACK标志的数据包以示传达确认信息。最后，发送端再回传一个带ACK标志的数据包，代表”握手”结束。若在握手过程中某个阶段莫名中断，TCP协议会再次以相同的顺序发送相同的数据包。</li>
 </ul>
-<h3 id="JDBC开发步骤★★★★★"><a href="#JDBC开发步骤★★★★★" class="headerlink" title="JDBC开发步骤★★★★★"></a>JDBC开发步骤★★★★★</h3><blockquote>
-<p>JDBC开发步骤必须牢记!!!</p>
-</blockquote>
-<ol>
-<li>注册驱动</li>
-<li>获得连接</li>
-<li>获取执行SQL语句的对象</li>
-<li>执行SQL语句</li>
-<li>处理结果</li>
-<li>释放资源</li>
+</li>
+<li><p>IP协议</p>
+<ul>
+<li>IP协议位于网络层。IP不等同于IP地址，它其实是一种协议的名称。</li>
+<li>IP协议的作用是把各种数据包传送给对方。保证确实传送到对方的两个需要满足的重要条件是IP地址和MAC地址。</li>
+<li>IP地址指明了节点被分配到的地址，MAC地址是指网卡所属的固定地址。IP地址可以和MAC地址进行配对。IP地址可变换，但MAC地址基本上不会更改。</li>
+</ul>
+</li>
+</ul>
+<h3 id="HTTP的基本流程"><a href="#HTTP的基本流程" class="headerlink" title="HTTP的基本流程"></a>HTTP的基本流程</h3><ol>
+<li>浏览器从URL中解析出服务器的主机名；</li>
+<li>浏览器将服务器的主机名转换成服务器的IP地址；</li>
+<li>浏览器将端口号(如果有的话)从URL中解析出来；</li>
+<li>浏览器建立一条与Web服务器的TCP连接；</li>
+<li>浏览器向服务器发送一条HTTP请求报文；</li>
+<li>服务器向浏览器回送一条HTTP响应报文；</li>
+<li>关闭连接，浏览器显示文档。</li>
 </ol>
-<p><strong>注意:注册驱动这块即<code> Class.forName(&quot;com.mysql.jdbc.Driver&quot;)</code>在MySQL驱动jar包驱动版本为5.1以上后也是可以省略的,但是jar包版本为5.0及其以下必须要手动声明,因此为了更好的兼容性,建议在开发过程中还是将<code> Class.forName(&quot;com.mysql.jdbc.Driver&quot;)</code> 加上.</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">代码实现:</span><br><span class="line"><span class="keyword">package</span> com.itheima;</span><br><span class="line"><span class="keyword">import</span> java.sql.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Jdbc_Base</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Connection connection = <span class="keyword">null</span>;</span><br><span class="line">        PreparedStatement statement = <span class="keyword">null</span>;</span><br><span class="line">        ResultSet resultSet = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//1.注册驱动</span></span><br><span class="line">            Class.forName(<span class="string">&quot;com.mysql.jdbc.Driver&quot;</span>);</span><br><span class="line">            <span class="comment">//2.获取连接</span></span><br><span class="line">            String url = <span class="string">&quot;jdbc:mysql://localhost:3306/test1&quot;</span>;</span><br><span class="line">            String username = <span class="string">&quot;root&quot;</span>;</span><br><span class="line">            String password = <span class="string">&quot;123&quot;</span>;</span><br><span class="line">            connection = DriverManager.getConnection(url, username, password);</span><br><span class="line">          	System.out.println(<span class="string">&quot;Connection接口在此处的实际实现类为:&quot;</span>+connection.getClass().getName());</span><br><span class="line">            <span class="comment">//3.获取执行SQL语句的对象</span></span><br><span class="line">            String sql = <span class="string">&quot;SELECT * FROM user&quot;</span>;</span><br><span class="line">            statement = connection.prepareStatement(sql);</span><br><span class="line">            <span class="comment">//4.执行SQL语句</span></span><br><span class="line">            resultSet = statement.executeQuery();</span><br><span class="line">            <span class="comment">//5.处理结果</span></span><br><span class="line">            <span class="keyword">while</span> (resultSet.next()) &#123;</span><br><span class="line">                Object username1 = resultSet.getObject(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">                Object password1 = resultSet.getObject(<span class="string">&quot;password&quot;</span>);</span><br><span class="line">                System.out.println(username1+<span class="string">&quot;:&quot;</span>+password1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="comment">//6.关闭资源</span></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                resultSet.close();</span><br><span class="line">                statement.close();</span><br><span class="line">                connection.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Connection接口★★★"><a href="#Connection接口★★★" class="headerlink" title="Connection接口★★★"></a>Connection接口★★★</h3><ul>
-<li>思考:在上面的代码中<code> DriverManager.getConnection()</code> 的返回值是用<code> java.sql.Connection</code>这个接口接收的,因此此处肯定用到了多态,可以确定返回的对象肯定是实现了Connection接口的,那么这个返回的对象到底是谁呢?<ul>
-<li>答:若你不清楚,可以将上述代码复制一份到开发工具中进行运行,然后控制台会输出如下一句话:<code> Connection接口在此处的实际实现类为:com.mysql.jdbc.JDBC4Connection</code> 查看代码不难发现这句话得输出是<code> System.out.println(&quot;Connection接口在此处的实际实现类为:&quot;+connection.getClass().getName());</code> 控制的,由此可以看出Connection接口的实际实现类为<code> com.mysql.jdbc.JDBC4Connection</code> 根据类的全限定类名可以看出该类是在MySQL的驱动包中实现的.</li>
-</ul>
-</li>
-<li>接着上面的思考题接着思考:<code> java.sql.Connection connection = DriverManager.getConnection()</code> 接收返回值的时候并不是采用一个实际类的类型进行接收的,而是采用接口进行接收的,这样子做有什么意义或者好处呢?<ul>
-<li>答:请你思考这样一个场景,公司一开始做项目的时候是把数据存储在了MySQL数据库中,但是后来由于业务需要,要将数据迁移到Oracle数据库中,MySQL数据库弃置,那么,若是在此处开发的时候若是采用一个具体实现类来接收<code>DriverManager.getConnection()</code> 返回的对象的话,由于这个实际类存在于mysql-connector-java-bin.jar包中,开发者肯定要在当前类里导入该包,现在业务变更,那么开发者不得不重新重新打开当前页面重新进行导包操作….</li>
-</ul>
-</li>
-<li>综合思考: JAVA中定义JDBC接口规范的重要性及其意义到底在哪里?<ul>
-<li>若Java没有定义一套JDBC接口规范,那么诸如Oracle,MySQL,SQLserver等等数据库厂商在提供操作数据驱动的时候由于没有一个官方的统一文档,它们就会按照自己的想法去定义类名,定义方法名,定义它们自己的一套实现逻辑….当开发人员要进行数据库操作的时候,不得不记忆好几套开发逻辑,好多种方法….若是项目后期要进行数据库的更改,由于各个数据库厂商所定义的方法名都不相同,开发人员便不得不大段大段的修改代码…有了JDBC接口规范后,所有的数据库厂商全部实现接口规范,按照一套开发逻辑走,只要在实现具体功能的时候提供自家的方案就可以了,对于开发人员来讲,不用管每个数据库厂商是如何实现<code> getConnection()</code>方法,如何实现<code> connection.prepareStatement(sql);</code> 的,只需要按照JDBC的规范就可以很方便的操作多种数据库了.深入想下就会发现:多态这个特性在Java语言中是多么的重要~</li>
-</ul>
-</li>
-</ul>
-<h3 id="ResultSet接口★"><a href="#ResultSet接口★" class="headerlink" title="ResultSet接口★"></a>ResultSet接口★</h3><ul>
-<li>思考: <code> resultset.next()</code> 的意义?<ul>
-<li>答:通过jdbc操作获取结果集resultset后，可以认为结果集即为一个数据表，对结果集进行操作，可以认为结果集中存在一个“虚拟指针”，虚拟指针起初停在数据库的第0行。此行是一个特殊行，没有数据（），当执行一次rs.next()方法，指针就会往下移动一行，当遍历完所有行后rs.next()就会返回false。</li>
-</ul>
-</li>
-<li>思考:通过resultset结果集可以获取查询的数据的每一列的列名吗?可以获取查询出数据的总条数吗?如果能,应该怎么获取<ul>
-<li>答:是可以获取的,通过<code>resultset.getMetaData()</code>来获取,<code>getMetaData</code> 方法可以获取结果集对象列的个数,类型,参数. <code>metaData.getColumnCount() </code> 获取总列数,<code>metaData.getColumnName(int column)</code> 获取列名,<code>metaData.getColumnType(int column)</code> 获取每列字段的类型.</li>
-</ul>
-</li>
-</ul>
-<h3 id="JDBC事务★★★"><a href="#JDBC事务★★★" class="headerlink" title="JDBC事务★★★"></a>JDBC事务★★★</h3><ul>
-<li>确保多个对数据库的操作(比如对数据库增加一条数据,对数据库删除一条数据)在同一个事务中可以同时提交,同时回滚的注意事项<ul>
-<li>必须保证多个操作用的是同一个connection对象.</li>
-<li>必须要开启事务<code> connection.setAutoCommit(false)</code> .</li>
-</ul>
-</li>
-<li>JDBC进行事务操作的主要方法<ul>
-<li>开启事务<code> connection.setAutoCommit(false)</code></li>
-<li>提交事务<code> connection.commit()</code></li>
-<li>回滚事务<code> connection.rollback()</code></li>
-</ul>
-</li>
-<li>提问:为什么要保证多个操作使用同一个connection对象?<ul>
-<li>答:我们都知道,使用Navicat或者sqlyog(小海豚)都可以对数据库进行操作,那么Navicat或者sqlyog是什么呢?它们都是连接数据库的客户端,我们在打开这些客户端后需要输入用户名和密码,如果正确就可以连接成功并且进行数据的查询了,现在,类比于Java,我们每打开一个客户端,就等于与数据库建立了一个连接,也就等于在Java中获取了一个connection对象.也就是说一个connection对象就相当于打开了一个客户端然后和数据库建立了一条连接.现在,试想一下,若是你打开了一个sqlyog,然后开启事务,再然后插入一条数据,现在你再打开一个Navicat,然后开启事务,再然后删除一条数据,这时候,当你在sqlyog中提交事务后,Navicat中的数据会同步提交吗?答案是不会的,不相信的话,自己尝试下~~</li>
-</ul>
-</li>
-</ul>
+<h2 id="HTTP请求与响应"><a href="#HTTP请求与响应" class="headerlink" title="HTTP请求与响应"></a>HTTP请求与响应</h2><h3 id="请求协议"><a href="#请求协议" class="headerlink" title="请求协议"></a>请求协议</h3><p>请求首行： //请求方式 请求路径 协议和版本  例如：GET/index.html HTTP/1.1<br>请求头：//请求头名称：请求头内容     例如：Host:laocalhost<br>空行： //用来与请求体分隔<br>请求体：// GET没有请求体，只有POST有请求体。请求体中的每个数据都是使用键值对形式（key-value）</p>
+<p>常见的请求方式：POST GET DELETE PUT</p>
+<p>GET请求：GET /get.html?name=xiaohong&amp;password=123456 HTTP/1.1<br>向服务器的特定资源发出查询请求，一般用于查询数据和资源的请求中。<br>get请求查询的参数可以在浏览器的地址栏中显示<br>请求的数据会附加在URL之后，以？分割URL和传输数据，多个参数用&amp;连接<br>没有请求体<br>POST请求：POST /post.html HTTP/1.1     name=xiaohong&amp;password=123456<br>向服务器提交数据，一般用在客户端将本地数据或者资源提交给服务器，例如注册用户，将用户信息提交给服务器。POST请求会把请求的数据放置在HTTP请求体中。</p>
+<h3 id="响应协议"><a href="#响应协议" class="headerlink" title="响应协议"></a>响应协议</h3><p>响应行：//协议/版本 状态码 状态码描述。   HTTP/1.1 200 OK<br>响应头：描述服务器的基本信息和数据描述，服务器可凭此通知客户端如何处理响应体的数据。<br>响应体：服务器向浏览器返回的正文。<br>网页状态码：服务器和浏览器用于确定状态的固定数字号码<br>格式;协议/版本  状态码  状态码描述<br>200：请求成功<br>302：请求重定向<br>404：请求资源不存在，通常是访问路径写错了，或者服务器删除了该资源<br>500：服务器内部发生错误</p>
+<h2 id="学习心得"><a href="#学习心得" class="headerlink" title="学习心得"></a>学习心得</h2><p>HTTP协议内容是有很多的教授的那些也是对以后学习的过程中影响较深的，另外若是以后有时间的话还是花点时间在HTTP协议上多看一些知识点，毕竟我觉得做JavaWeb开发若是对HTTP协议只了解一点皮毛的话是远远不够的，还是要长足积累，补习一下计算机网络知识点。</p>
 
       
 
@@ -301,7 +279,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/07/JavawebNote/JDBC%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/08/%E7%AC%AC%E4%B8%89%E7%AB%A0HTTP/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -315,17 +293,8 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/06/07/JavawebNote/HTTP%E5%8D%8F%E8%AE%AE%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/06/07/JavawebNote/JSP_EL_jstl%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/06/08/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title"></div>
       <i class="icon-circle-right"></i>
     </a>
