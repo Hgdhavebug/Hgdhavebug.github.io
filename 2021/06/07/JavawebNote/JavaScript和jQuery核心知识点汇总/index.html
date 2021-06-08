@@ -6,19 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>vim编辑器的基本使用 | 胡贵冬的笔记</title>
+  <title>胡贵冬的笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#vim编辑器的基本使用    vi编辑器是Unix系统最初的编辑器。它使用控制台图形模式来模拟文本编辑窗口，允许查看文件中的行、在文件中移动、插入、编辑和替换文本。尽管它可能是世界上最复杂的编辑器（至少讨厌它的人是这么认为的），但其拥有的大量特性使其成为Unix系统管理员多年来的支柱性工具。在GNU项目将vi编辑器移植到开源世界时，他们决定对其作一些改进。由于它不再是以前Unix中的那个原始的v">
+  <meta name="description" content="JavaScript 写前声明：JavaScript这个章节难理解点较多，通常学生就算能记住基本语法、常用事件、常用DOM操作但是由于对一些概念不理解、对一些基本思想不够重视导致对知识的错误应用，因此本文主要解决这些问题，以及对一些重点知识的总结，基本语法不再赘述。另外，提醒初学者，JavaScript及jQuery所学知识点都极易遗忘，不要因此恐慌，平常多回头敲敲案例，多复习一下，jQuery的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim编辑器的基本使用">
-<meta property="og:url" content="http://example.com/2021/04/21/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:title" content="胡贵冬的笔记">
+<meta property="og:url" content="http://example.com/2021/06/07/JavawebNote/JavaScript%E5%92%8CjQuery%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/index.html">
 <meta property="og:site_name" content="胡贵冬的笔记">
-<meta property="og:description" content="#vim编辑器的基本使用    vi编辑器是Unix系统最初的编辑器。它使用控制台图形模式来模拟文本编辑窗口，允许查看文件中的行、在文件中移动、插入、编辑和替换文本。尽管它可能是世界上最复杂的编辑器（至少讨厌它的人是这么认为的），但其拥有的大量特性使其成为Unix系统管理员多年来的支柱性工具。在GNU项目将vi编辑器移植到开源世界时，他们决定对其作一些改进。由于它不再是以前Unix中的那个原始的v">
+<meta property="og:description" content="JavaScript 写前声明：JavaScript这个章节难理解点较多，通常学生就算能记住基本语法、常用事件、常用DOM操作但是由于对一些概念不理解、对一些基本思想不够重视导致对知识的错误应用，因此本文主要解决这些问题，以及对一些重点知识的总结，基本语法不再赘述。另外，提醒初学者，JavaScript及jQuery所学知识点都极易遗忘，不要因此恐慌，平常多回头敲敲案例，多复习一下，jQuery的">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-20T16:53:17.000Z">
-<meta property="article:modified_time" content="2021-04-21T16:03:59.860Z">
+<meta property="og:image" content="http://example.com/2021/06/07/JavawebNote/JavaScript%E5%92%8CjQuery%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/images/jQuery%E5%88%92%E9%87%8D%E7%82%B9.jpg">
+<meta property="article:published_time" content="2021-06-07T02:02:33.459Z">
+<meta property="article:modified_time" content="2021-06-07T02:02:33.459Z">
 <meta property="article:author" content="胡贵冬">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/06/07/JavawebNote/JavaScript%E5%92%8CjQuery%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/images/jQuery%E5%88%92%E9%87%8D%E7%82%B9.jpg">
   
     <link rel="alternative" href="/atom.xml" title="胡贵冬的笔记" type="application/atom+xml">
   
@@ -154,52 +156,167 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-vim编辑器的基本使用" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JavawebNote/JavaScript和jQuery核心知识点汇总" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      vim编辑器的基本使用
-    </h1>
-  
-
-        
-        <a href="/2021/04/21/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2021-04-20T16:53:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-21</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#vim编辑器的基本使用<br>    vi编辑器是Unix系统最初的编辑器。它使用控制台图形模式来模拟文本编辑窗口，允许查看文件中的行、在文件中移动、插入、编辑和替换文本。尽管它可能是世界上最复杂的编辑器（至少讨厌它的人是这么认为的），但其拥有的大量特性使其成为Unix系统管理员多年来的支柱性工具。在GNU项目将vi编辑器移植到开源世界时，他们决定对其作一些改进。由于它不再是以前Unix中的那个原始的vi编辑器了，开发人员也就将他重命名为vi improved, 或vim。</p>
-<hr>
-<h2 id="1-vim的基本使用"><a href="#1-vim的基本使用" class="headerlink" title="1.vim的基本使用"></a>1.vim的基本使用</h2><p><strong>vim 文件名</strong>        启动vim编辑器<br>vim编辑器有两种操作模式：</p>
+        <h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><blockquote>
+<p>写前声明：JavaScript这个章节难理解点较多，通常学生就算能记住基本语法、常用事件、常用DOM操作但是由于对一些概念不理解、对一些基本思想不够重视导致对知识的错误应用，因此本文主要解决这些问题，以及对一些重点知识的总结，基本语法不再赘述。另外，提醒初学者，JavaScript及jQuery所学知识点都极易遗忘，不要因此恐慌，平常多回头敲敲案例，多复习一下，jQuery的API文档平常没事多翻翻看看就行了。</p>
+</blockquote>
+<h3 id="JavaScript对象★★★"><a href="#JavaScript对象★★★" class="headerlink" title="JavaScript对象★★★"></a>JavaScript对象★★★</h3><blockquote>
+<p>JavaScript对象在JavaScript中也属于高级内容，若深入讲解的话比较复杂难懂，此处只做简要介绍，对其有个大概的了解，若想深入了解，请自己专研。</p>
+</blockquote>
 <ul>
-<li>普通模式</li>
-<li>插入模式<br>  刚启动vim编辑器，默认进入普通模式，在这个模式下，vim编辑器会将按键解释成命令（这也是vim特殊的地方，很多没有使用过vim的人刚开始打开vim时会被这个模式吓倒，毕竟在键盘上按键但一点反应都没有的编辑器实在是少见）。<br>在普通模式下键入i可进入插入模式（insert。事实上，键入a或者s也可进入插入模式），在插入模式下，vim会将你在光标位置输入的每个键都插入到缓冲区（也就是直接输入到文本中，并在屏幕上打印出来）。要退出插入模式返回普通模式话，就要键入退出键（ESC键，也就是Escape键）。<br>在普通模式下，若是vim能正确识别你的终端类型（正常情况下应该都可以的），就可以直接使用方向键在文本区域移动光标。<br>vim也有独有的用来移动光标的命令。</li>
+<li><p>定义：ECMA-262把对象定义为：“无序属性的集合，其属性可以包含基本值、对象或者函数”。</p>
+</li>
+<li><p>对象的几种定义格式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">第一种：</span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">person.name = <span class="string">&quot;Nicholas&quot;</span>;</span><br><span class="line">person.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  alert(<span class="built_in">this</span>.name);</span><br><span class="line">&#125;</span><br><span class="line">调用方式：</span><br><span class="line">person.sayName();</span><br><span class="line"></span><br><span class="line">第二种(对象字面量语法，较为流行)：</span><br><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  name: <span class="string">&quot;Nicholas&quot;</span>,</span><br><span class="line">  sayName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="built_in">this</span>.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>JavaScript中的对象分为内建对象与宿主对象(抛开用户自定义对象不谈)</p>
+<ul>
+<li>内建对象：JavaScript语言本身包含的对象，例如Math，Array，Date等(JavaScript的内建对象类似于Java就相当于Java的JDK)。</li>
+<li>宿主对象：宿主对象不是由JavaScript语言本身而是由它的运行环境提供的。具体到Web应用，这个环境就是各种Web浏览器。由Web浏览器提供的预定义对象被称为宿主对象。(类比Java，就相当于在eclipse创建项目后引入Tomcat服务器的依赖jar包，例如HttpServlet这些不属于JDK里面的类而是属于Tomcat依赖jar包中的类)。</li>
 </ul>
-<p>h：左移一个字符<br>j ：下移一个字符<br>k：上移一个字符<br>l ：右移一个字符<br>Ctrl+F（PageDown）：下翻一屏<br>Ctrl+B（PageUp）：上翻一屏<br>G：移到缓冲区最后一行<br>num G：移到缓冲区第num行<br>gg：移到缓冲区第一行<br>vim编辑器在普通模式下可按冒号键：进入命令行模式，可以输入额外的命令来控制vim的行为。</p>
-<p>q：如果未修改缓冲区数据，退出<br>q！：取消所有对缓冲区数据的修改并退出<br>w filename：将文件保存到另一个文件中<br>wq：将缓冲区数据保存到文件中并退出
- </p>
-<hr>
-<h2 id="2、在普通模式下编辑数据"><a href="#2、在普通模式下编辑数据" class="headerlink" title="2、在普通模式下编辑数据"></a>2、在普通模式下编辑数据</h2><p>x：删除当前光标所在位置的字符<br>dd：删除当前光标所在行<br>dw：删除当前光标所在位置的单词<br>d$：删除当前光标所在位置至行尾的内容<br>J：删除当前光标所在行行尾的换行符（拼接行）<br>u：撤销前一编辑命令<br>a：在当前光标后追加数据<br>A：在当前光标所在行行尾追加数据<br>r char：用char替换当前光标所在位置的单个字符<br>R text：用text覆盖当前光标所在位置的数据，直到按下ESC键<br>    有些编辑命令允许使用数字修饰符来指定重复该命令多少次，如：命令2x会删除从光标当前位置开始的两个字符，命令5dd会删除从光标当前所在行开始的5行。<br>    另外，vim编辑器在普通模式下通常会把删除键（Delete键）识别成x命令的功能，通常不识别退格键（Backspace键）。
- </p>
-<hr>
-<h2 id="3、复制和粘贴"><a href="#3、复制和粘贴" class="headerlink" title="3、复制和粘贴"></a>3、复制和粘贴</h2><pre><code>vim编辑器在删除数据时，实际上会将数据保存在单独的一个寄存器中，可以用p命令取回。例如，可以用dd命令删除一行文本，然后把光标移动到缓冲区的某个要放置该文本的地方，然后用p命令，该命令会将文本插入到当前光标所在行之后。
-</code></pre>
-<p>vim编辑器中复制命令是y（代表yank），可以在y命令后面使用和d命令相同的第二字符（如：yw代表复制一个单词，y$代表复制到行尾）。在复制文本后，把光标移动到想放置文本的地方，键入p命令，复制的文本就会出现在该位置。<br>复制命令一般在可视模式下使用。可视模式会在移动光标的同时高亮显示文本，键入v键可进入可视模式，如下图所示。<br>可先在可视模式下覆盖要复制的文本，然后键入y命令来激活复制命令，之后移动光标到要放置文本的位置，使用p命令将寄存器中的文本粘贴下来。
- </p>
-<hr>
-<h2 id="4、查找和替换"><a href="#4、查找和替换" class="headerlink" title="4、查找和替换"></a>4、查找和替换</h2><pre><code>vim编辑器在普通模式下，可使用/（斜线键）来查找文本。按下/后，光标会跑到消息行，然后vim会显示出斜线。输入要查找的文本，按下回车键便可完成查找。vim编辑器会采用以下三种回应中的一种：
+</li>
+<li><p>与宿主对象相关疑难点解释</p>
+<p><strong>问：</strong>在js代码中，为什么获取一个标签对象后就可以通过对象”点”属性的方式获取该属性所对应的属性值呢？如下示例代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">  onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> ttt = <span class="built_in">document</span>.getElementById(<span class="string">&quot;ttt&quot;</span>);</span></span><br><span class="line"><span class="javascript">    alert(ttt.name+<span class="string">&quot;,&quot;</span>+ttt.value+<span class="string">&quot;,&quot;</span>+ttt.test);</span></span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;ttt&quot;</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">value</span>=<span class="string">&quot;zs&quot;</span> <span class="attr">test</span>=<span class="string">&quot;test&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 
-如果要查找的文本出现在光标位置之后，则光标会跳到该文本出现的第一个位置。
-如果要查找的文本未在光标当前位置之后出现，则光标会绕过文件末尾，出现在该文本所在的第一个位置（并用一条消息指明）。
-</code></pre>
-<p>输出一条错误消息，说明在文件中没有找到要查找的文本。<br>    要继续查找同一个文本，可键入/（斜线键），然后键入回车键。或者键入n命令，表示下一个（next）。<br>vim编辑器在命令行模式下可使用替换命令。替换命令的格式是：:s/old/new/。vim编辑器会跳到old第一次出现的地方，并用new来替换。还可用以下命令来替换多处文本：</p>
-<p>:s/old/new/g ：替换一行中的所有old<br>:n,ms:/old/new/g ：替换行号n和m之间的所有old<br>:%s/old/new/g ：替换整个文件中的所有old<br>:%s/old/new/gc ：替换整个文件中的所有old，但在每次出现时提示，询问是否要替换<br> <br>    以上便是博主对vim编辑器一些基本用法的总结，熟悉以上vim的基本操作之后，便可使用vim高效地完成日常文本文件的编辑。</p>
+<p>执行上面的代码弹出框会弹出<code> username,zs,undefined</code> ，上述代码首先通过<code>document.getElementById(&quot;ttt&quot;)</code> 获取input标签所对应的js对象，然后通过对象”点”属性的方式(ttt.name)取值，根据弹出框结果可以看出，name与value都是可以取出对应的值的，但是test却没有，这是为什么呢？</p>
+<p><strong>解释：</strong> 在web浏览器中，几乎对所有的HTML标签，都会对应着给它们预置了js对象，也就是宿主对象，为了方便获取标签中的属性值，又在宿主对象中内置了常用属性，比如input标签就有与其对应的js对象，该对象中预置了text、id、name、value等等属性，所以用户可以通过对象点属性的方式去获取属性值，但是，该对象中并没有预置test属性，因此是无法通过对象点属性的方式获取其对应值的(可以通过<code>ttt.getAttribute(&quot;test&quot;)</code> 的方式获取)。</p>
+</li>
+</ul>
+<h3 id="JavaScript中常用的DOM元素操作★★★★★"><a href="#JavaScript中常用的DOM元素操作★★★★★" class="headerlink" title="JavaScript中常用的DOM元素操作★★★★★"></a>JavaScript中常用的DOM元素操作★★★★★</h3><ul>
+<li><code>var demo = document.getElementById(&quot;id&quot;)</code><ul>
+<li>根据标签中设置的id值来获取对应的标签对象，注意此处为Element，是“元素”的单数形式，因此获得的直接就是元素对象了，获取过之后可以直接通过demo”点”的方式获取属性值或绑定事件。</li>
+</ul>
+</li>
+<li><code>var demo = document.getElementsByClassName(&quot;classname&quot;)</code><ul>
+<li>根据标签中设置的class属性值来获取对应标签对象的集合数组，注意此处是Elements，是“元素”的复数形式，因此直接获得的是一个数组，要想对标签对象进行操作，需要先遍历该数组取到标签对象后再操作。与其相似的还有<code>document.getElementsByTagName(&quot;tagname&quot;)</code> (根据标签名获取)、<code>document.ElementsByName(&quot;name&quot;)</code> (根据name属性值获取)。</li>
+</ul>
+</li>
+<li><code>元素对象.appendChild(元素对象)</code><ul>
+<li>在一个元素标签对象内拼接一个子标签对象。</li>
+</ul>
+</li>
+<li><code>document.createElement(&quot;&quot;)</code><ul>
+<li>在js中动态的创建一个标签对象，例如：<code>document.createElement(&quot;a&quot;)</code> 创建一个a标签对象。</li>
+<li>仅仅创建一个标签对象是无法在页面展示的，需要结合<code>appendChild()</code> 方法将本对象拼接与页面已存在的标签对象产生关联才能做到在页面上展示。</li>
+</ul>
+</li>
+<li><code>元素对象.remove()</code> <ul>
+<li>通过remove方法删除某个标签对象。</li>
+</ul>
+</li>
+<li><code>元素对象.innerText</code><ul>
+<li><code>var i =元素对象.innerText </code> 获取该标签及其该标签的后代标签内所有的文本内容。</li>
+<li><code>元素对象.innerText = &quot;文本内容&quot; </code> 往当前标签内插入文本内容。</li>
+</ul>
+</li>
+<li><code>元素对象.innerHTML</code><ul>
+<li><code>var i =元素对象.innerHTML</code>获取该标签及其该标签的后代标签内所有的标签及文本内容。<br> * <code>元素对象.innerHtml = &quot;标签及文本内容&quot; </code>往当前标签内插入标签及文本内容。</li>
+</ul>
+</li>
+</ul>
+<h3 id="事件绑定★★★★★"><a href="#事件绑定★★★★★" class="headerlink" title="事件绑定★★★★★"></a>事件绑定★★★★★</h3><blockquote>
+<p>一定要对事件绑定的写法格式牢记于心，不可与后面的jQuery的写法混淆！！！</p>
+</blockquote>
+<ul>
+<li><p>常用写法一：在HTML上进行事件绑定</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            alert(<span class="string">&quot;我被触发啦~~&quot;</span>)</span></span><br><span class="line">        &#125;</span><br><span class="line"> <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">id</span>=<span class="string">&quot;btn&quot;</span> <span class="attr">value</span>=<span class="string">&quot;点击我&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;fn()&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>常用写法二：在JavaScript中进行事件绑定</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">&quot;btn&quot;</span>);</span></span><br><span class="line"><span class="javascript">            btn.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                alert(<span class="string">&quot;我被触发啦~~&quot;</span>);</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"> <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">id</span>=<span class="string">&quot;btn&quot;</span> <span class="attr">value</span>=<span class="string">&quot;点击我&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong> 新手最容易在此处出问题，漏写文档加载事件onload，错误代码完整展示如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">&quot;btn&quot;</span>);</span></span><br><span class="line"><span class="javascript">      btn.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        alert(<span class="string">&quot;我被触发啦~~&quot;</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">id</span>=<span class="string">&quot;btn&quot;</span> <span class="attr">value</span>=<span class="string">&quot;点击我&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;fn()&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>错误分析：</strong> 因为文档流是从上往下加载的，加载完第一行加载第二行，当加载到JavaScript代码的时候执行JavaScript代码，因为在此处JavaScript代码块定义在了文档头标签<code>&lt;head&gt;&lt;/head&gt;</code>中,当程序执行<code>var btn = document.getElementById(&quot;btn&quot;);</code> 时，还并未读取到下方的输入框标签，因此这时候程序根本不知道id值为btn的标签对象到底是谁，对象找不到，点击事件自然也绑定不成功了。</p>
+</li>
+</ul>
+<h3 id="数组的两种遍历方式★★"><a href="#数组的两种遍历方式★★" class="headerlink" title="数组的两种遍历方式★★"></a>数组的两种遍历方式★★</h3><ul>
+<li><p>对于非自己创建的js对象进行遍历时尽量使用普通for循环进行遍历。普通for循环只能遍历出角标为数字的值</p>
+</li>
+<li><p>对于是自己创建的，既含有数字角标，又含有字符串角标的js对象进行遍历时使用增强for循环进行遍历。增强for循环既可以遍历出角标为数字的值也可以遍历出角标为字符串的值。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">var</span> arrs = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">4</span>,<span class="number">8</span>,<span class="number">90</span>);</span></span><br><span class="line"><span class="javascript">  arrs[<span class="string">&quot;first&quot;</span>] = <span class="string">&quot;test1&quot;</span>;</span></span><br><span class="line"><span class="javascript">  arrs[<span class="string">&quot;second&quot;</span>] = <span class="string">&quot;test2&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="comment">//输出数组的长度</span></span></span><br><span class="line">  alert(arrs.length);</span><br><span class="line"><span class="javascript">  <span class="comment">//普通for循环进行数组的遍历</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; arrs.length;i++)&#123;</span></span><br><span class="line"><span class="javascript">    alert(<span class="string">&quot;数组中角标为&quot;</span>+i+<span class="string">&quot;的元素对应的值是：&quot;</span>+arrs[i]);</span></span><br><span class="line">  &#125;</span><br><span class="line"><span class="javascript">  <span class="comment">//增强for循环进行数组的遍历</span></span></span><br><span class="line">  for(i in arrs)&#123;</span><br><span class="line"><span class="javascript">    alert(<span class="string">&quot;数组中角标为&quot;</span>+i+<span class="string">&quot;的元素对应的值是：&quot;</span>+arrs[i]);</span></span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+</li>
+</ul>
+<h3 id="前端遇到BUG的处理思路★★★★★"><a href="#前端遇到BUG的处理思路★★★★★" class="headerlink" title="前端遇到BUG的处理思路★★★★★"></a>前端遇到BUG的处理思路★★★★★</h3><blockquote>
+<p>如果你刚接触前端知识，之前对其一无所知，在前端遇到问题后总是找很久还找不到错误在哪里，那么，强烈建议你按照我下面讲的解决BUG的思路来，步骤虽然少、简单，但是有用没用，一试便知。</p>
+</blockquote>
+<ul>
+<li>核心步骤总结：三步走加两明确</li>
+<li>前端问题的一般体现：预期结果与实际不相符<ul>
+<li>第一步：F12打开调试界面查看是否有报错，若报错状态码为404，且报错信息中包含：<a target="_blank" rel="noopener" href="http://127.0.0.1:8020/favicon.ico%E9%93%BE%E6%8E%A5%EF%BC%8C%E5%88%99%E5%BF%BD%E7%95%A5%E8%AF%A5%E9%94%99%E8%AF%AF%E5%8D%B3%E5%8F%AF%E3%80%82">http://127.0.0.1:8020/favicon.ico链接，则忽略该错误即可。</a></li>
+<li>第二步：若调试界面中无错误信息，则调试相关函数，查看函数是否真的被调用了，如点击事件调用的函数。如何测试相关函数？在函数的第一行添加一个alert（）或者console.log()都行。</li>
+<li>第三步：若函数也确实被调用了，但是预期结果与实际还是不相符，那么十有八九就是代码逻辑有问题。</li>
+<li>一明确：明确自己写的每一步是什么意思，然后再跟着代码一步步的进行分析，这样大部分的错误都能够被解决。</li>
+<li>二明确：明确程序流是怎样的从上往下执行的。</li>
+</ul>
+</li>
+</ul>
+<h2 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h2><blockquote>
+<p>学习jQuery这块一定要弄清楚jQuery对象和JavaScript原生对象两者到底存在什么样的关系，千万不要将两者混淆，多写点代码，看下两者的区别到底是什么，若是这里弄不清楚，那么用起JavaScript与jQuery难免会错误百出。</p>
+</blockquote>
+<h3 id="JavaScript原生对象与jQuery对象的转换★★★★★"><a href="#JavaScript原生对象与jQuery对象的转换★★★★★" class="headerlink" title="JavaScript原生对象与jQuery对象的转换★★★★★"></a>JavaScript原生对象与jQuery对象的转换★★★★★</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">id</span>=<span class="string">&quot;btn&quot;</span> <span class="attr">value</span>=<span class="string">&quot;这是一个按钮&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;tt&quot;</span> <span class="attr">value</span>=<span class="string">&quot;文本输入框1&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;tt&quot;</span> <span class="attr">value</span>=<span class="string">&quot;文本输入框2&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;tt&quot;</span> <span class="attr">value</span>=<span class="string">&quot;文本输入框3&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;tt&quot;</span> <span class="attr">value</span>=<span class="string">&quot;文本输入框4&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>JavaScript：<ul>
+<li>通过id获取一个对应的对象<ul>
+<li><code>var btn = document.getElementById(&quot;btn&quot;);</code></li>
+<li>获取之后即为一个对应的元素对象，可以直接通过btn.value获取该对象中对应的value值。</li>
+<li>JavaScript元素对象转jQuery对象：<code>$(btn)</code></li>
+<li>绑定事件：<code>btn.onclick = function()&#123;&#125;</code></li>
+</ul>
+</li>
+<li>通过class获取多个对应的对象<ul>
+<li><code>var tt = document.getElementsByClassName(&quot;tt&quot;);</code></li>
+<li>获取之后为一个数组对象，需要通过遍历获取其中的每个元素对象，之后才能获取该对象中对应的value值。</li>
+<li>JavaScript元素对象转jQuery对象：<code>$(tt)</code> 。</li>
+<li>绑定事件：必须先遍历，之后再绑定。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>jQuery：<ul>
+<li>通过id获取一个对应的jQuery对象<ul>
+<li><code>var btn = $(&quot;#btn&quot;);</code></li>
+<li>获取之后为一个jQuery对象，要想获取该对象中的value值，那么就应该用对应的jQuery的方式进行获取，即：<code>$(&quot;#btn&quot;).val()</code> 。</li>
+<li>jQuery对象转JavaScript元素对象：<code>$(&quot;#btn&quot;)[0]</code></li>
+<li>绑定事件：<code>$(&quot;#btn&quot;).click(function()&#123;&#125;)</code></li>
+</ul>
+</li>
+<li>通过class选择器获取一个对应的jQuery对象<ul>
+<li><code>var tt = $(&quot;.tt&quot;);</code></li>
+<li>获取之后为一个jQuery对象，而这个jQuery对象中包含多个原生JavaScript元素对象，若是直接使用<code>var tt = $(&quot;.tt&quot;).val()</code>，那么只能获取第一个元素对象对应的value值，若是要获取所有的value值，必须要对该jQuery对象进行遍历获取每个元素对象后再获取其value值。但是，若是对这一组元素对象进行事件的绑定时，直接采用<code>tt.click(function()&#123;&#125;)</code>绑定即可，不需要遍历获取每个元素后再进行绑定。</li>
+<li>jQuery对象转JavaScript元素对象：<code>$(&quot;.tt&quot;).each(function()&#123;alert(this.value)&#125;)</code>。</li>
+<li>绑定事件：<code>$(&quot;.tt&quot;).click(function()&#123;&#125;) </code> 可进行事件的批量绑定。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="this与jQuery之间的关系★★★★"><a href="#this与jQuery之间的关系★★★★" class="headerlink" title="this与jQuery之间的关系★★★★"></a>this与jQuery之间的关系★★★★</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../jquery-1.11.3.js&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">  $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">    $(<span class="string">&quot;.tt&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">    	alert(<span class="built_in">this</span>.value);</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">id</span>=<span class="string">&quot;btn&quot;</span> <span class="attr">value</span>=<span class="string">&quot;这是一个按钮&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;tt&quot;</span> <span class="attr">value</span>=<span class="string">&quot;文本输入框1&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;tt&quot;</span> <span class="attr">value</span>=<span class="string">&quot;文本输入框2&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;tt&quot;</span> <span class="attr">value</span>=<span class="string">&quot;文本输入框3&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;tt&quot;</span> <span class="attr">value</span>=<span class="string">&quot;文本输入框4&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在上面代码的事件绑定中this与当前jQuery对象的关系？</p>
+<ul>
+<li>通过上述代码，可以实现对含有类名为tt的元素对象进行点击事件的绑定，但是绑定后函数的执行是在点击事件发生的才执行的，当点击时，点击哪个元素节点那么this就代表哪个元素对象，因此，课上讲的<strong>谁调用函数，那么this就代表谁在此处仍然适用</strong></li>
+</ul>
+<h3 id="jQuery中必会API总结★★★★"><a href="#jQuery中必会API总结★★★★" class="headerlink" title="jQuery中必会API总结★★★★"></a>jQuery中必会API总结★★★★</h3><blockquote>
+<p>由于API文档上面解释的很详细，而且有具体的实例可以测试，因此在这里我就不再赘述，只将重点API圈出，具体见下图。</p>
+</blockquote>
+<p><img src="/2021/06/07/JavawebNote/JavaScript%E5%92%8CjQuery%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/images/jQuery%E5%88%92%E9%87%8D%E7%82%B9.jpg" alt="jQuery划重点"></p>
+<h3 id="其他注意事项★★★"><a href="#其他注意事项★★★" class="headerlink" title="其他注意事项★★★"></a>其他注意事项★★★</h3><ul>
+<li>JavaScript中进行字符串内容比较时，直接用==进行比较即可，<strong>JavaScript中没有equals()方法！！</strong></li>
+<li>JavaScript中可以用Location.href = “URL网址” 的方式进行跳转链接，当程序走到这里时就会自动进行链接跳转。</li>
+<li>关于对一个标签绑定多个相同事件的状况分析<ul>
+<li>在标签中直接绑定两个相同的事件，那么每次执行的时候只会执行第一个绑定的事件</li>
+<li>用原生js的方式对一个标签同时绑定两个相同的事件，后绑定的事件始终会覆盖先绑定的事件（先绑定的事件中的方法是不会执行的）</li>
+<li>用jQuery的方式对一个标签同时绑定两个相同的事件，那么按照绑定事件的先后顺序去执行方法。</li>
+</ul>
+</li>
+</ul>
 
       
 
@@ -284,7 +401,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/04/21/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/07/JavawebNote/JavaScript%E5%92%8CjQuery%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -298,7 +415,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/06/07/JavawebNote/Ajax%E4%B8%8EJSON%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/06/07/JavawebNote/JSP_EL_jstl%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -307,6 +424,11 @@
       </div>
     </a>
   
+  
+    <a href="/2021/06/07/JavawebNote/Linux%E5%8F%8A%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%96%B9%E6%A1%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

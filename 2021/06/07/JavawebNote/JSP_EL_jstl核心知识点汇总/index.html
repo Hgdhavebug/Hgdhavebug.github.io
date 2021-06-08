@@ -6,19 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>vim编辑器的基本使用 | 胡贵冬的笔记</title>
+  <title>胡贵冬的笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#vim编辑器的基本使用    vi编辑器是Unix系统最初的编辑器。它使用控制台图形模式来模拟文本编辑窗口，允许查看文件中的行、在文件中移动、插入、编辑和替换文本。尽管它可能是世界上最复杂的编辑器（至少讨厌它的人是这么认为的），但其拥有的大量特性使其成为Unix系统管理员多年来的支柱性工具。在GNU项目将vi编辑器移植到开源世界时，他们决定对其作一些改进。由于它不再是以前Unix中的那个原始的v">
+  <meta name="description" content="给初学者的建议 由于HTML+AJAX+服务器模式的流行，JSP目前在市场上用的越来越少了，但是还是有很多的老项目仍然在沿用它，而且作为JavaWeb程序员还是需要对曾经市场占有比重极高的JSP技术进行掌握的。 掌握JSP，最关键的是能明白它和HTML静态页面之间的区别，它和Servlet之间的联系，知道JSP页面里jstl或者el表达式解析的时机。熟悉JSP的九大内置对象。  JSP运行原理 J">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim编辑器的基本使用">
-<meta property="og:url" content="http://example.com/2021/04/21/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:title" content="胡贵冬的笔记">
+<meta property="og:url" content="http://example.com/2021/06/07/JavawebNote/JSP_EL_jstl%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/index.html">
 <meta property="og:site_name" content="胡贵冬的笔记">
-<meta property="og:description" content="#vim编辑器的基本使用    vi编辑器是Unix系统最初的编辑器。它使用控制台图形模式来模拟文本编辑窗口，允许查看文件中的行、在文件中移动、插入、编辑和替换文本。尽管它可能是世界上最复杂的编辑器（至少讨厌它的人是这么认为的），但其拥有的大量特性使其成为Unix系统管理员多年来的支柱性工具。在GNU项目将vi编辑器移植到开源世界时，他们决定对其作一些改进。由于它不再是以前Unix中的那个原始的v">
+<meta property="og:description" content="给初学者的建议 由于HTML+AJAX+服务器模式的流行，JSP目前在市场上用的越来越少了，但是还是有很多的老项目仍然在沿用它，而且作为JavaWeb程序员还是需要对曾经市场占有比重极高的JSP技术进行掌握的。 掌握JSP，最关键的是能明白它和HTML静态页面之间的区别，它和Servlet之间的联系，知道JSP页面里jstl或者el表达式解析的时机。熟悉JSP的九大内置对象。  JSP运行原理 J">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-20T16:53:17.000Z">
-<meta property="article:modified_time" content="2021-04-21T16:03:59.860Z">
+<meta property="og:image" content="http://example.com/2021/06/07/JavawebNote/JSP_EL_jstl%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/images/JSP%E8%BD%AC%E6%8D%A2%E6%B5%81%E7%A8%8B.png">
+<meta property="article:published_time" content="2021-06-07T02:02:33.459Z">
+<meta property="article:modified_time" content="2021-06-07T02:02:33.459Z">
 <meta property="article:author" content="胡贵冬">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/06/07/JavawebNote/JSP_EL_jstl%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/images/JSP%E8%BD%AC%E6%8D%A2%E6%B5%81%E7%A8%8B.png">
   
     <link rel="alternative" href="/atom.xml" title="胡贵冬的笔记" type="application/atom+xml">
   
@@ -154,52 +156,121 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-vim编辑器的基本使用" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JavawebNote/JSP_EL_jstl核心知识点汇总" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      vim编辑器的基本使用
-    </h1>
-  
-
-        
-        <a href="/2021/04/21/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2021-04-20T16:53:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-21</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#vim编辑器的基本使用<br>    vi编辑器是Unix系统最初的编辑器。它使用控制台图形模式来模拟文本编辑窗口，允许查看文件中的行、在文件中移动、插入、编辑和替换文本。尽管它可能是世界上最复杂的编辑器（至少讨厌它的人是这么认为的），但其拥有的大量特性使其成为Unix系统管理员多年来的支柱性工具。在GNU项目将vi编辑器移植到开源世界时，他们决定对其作一些改进。由于它不再是以前Unix中的那个原始的vi编辑器了，开发人员也就将他重命名为vi improved, 或vim。</p>
-<hr>
-<h2 id="1-vim的基本使用"><a href="#1-vim的基本使用" class="headerlink" title="1.vim的基本使用"></a>1.vim的基本使用</h2><p><strong>vim 文件名</strong>        启动vim编辑器<br>vim编辑器有两种操作模式：</p>
-<ul>
-<li>普通模式</li>
-<li>插入模式<br>  刚启动vim编辑器，默认进入普通模式，在这个模式下，vim编辑器会将按键解释成命令（这也是vim特殊的地方，很多没有使用过vim的人刚开始打开vim时会被这个模式吓倒，毕竟在键盘上按键但一点反应都没有的编辑器实在是少见）。<br>在普通模式下键入i可进入插入模式（insert。事实上，键入a或者s也可进入插入模式），在插入模式下，vim会将你在光标位置输入的每个键都插入到缓冲区（也就是直接输入到文本中，并在屏幕上打印出来）。要退出插入模式返回普通模式话，就要键入退出键（ESC键，也就是Escape键）。<br>在普通模式下，若是vim能正确识别你的终端类型（正常情况下应该都可以的），就可以直接使用方向键在文本区域移动光标。<br>vim也有独有的用来移动光标的命令。</li>
+        <h3 id="给初学者的建议"><a href="#给初学者的建议" class="headerlink" title="给初学者的建议"></a>给初学者的建议</h3><ul>
+<li>由于HTML+AJAX+服务器模式的流行，JSP目前在市场上用的越来越少了，但是还是有很多的老项目仍然在沿用它，而且作为JavaWeb程序员还是需要对曾经市场占有比重极高的JSP技术进行掌握的。</li>
+<li>掌握JSP，最关键的是能明白它和HTML静态页面之间的区别，它和Servlet之间的联系，知道JSP页面里jstl或者el表达式解析的时机。熟悉JSP的九大内置对象。</li>
 </ul>
-<p>h：左移一个字符<br>j ：下移一个字符<br>k：上移一个字符<br>l ：右移一个字符<br>Ctrl+F（PageDown）：下翻一屏<br>Ctrl+B（PageUp）：上翻一屏<br>G：移到缓冲区最后一行<br>num G：移到缓冲区第num行<br>gg：移到缓冲区第一行<br>vim编辑器在普通模式下可按冒号键：进入命令行模式，可以输入额外的命令来控制vim的行为。</p>
-<p>q：如果未修改缓冲区数据，退出<br>q！：取消所有对缓冲区数据的修改并退出<br>w filename：将文件保存到另一个文件中<br>wq：将缓冲区数据保存到文件中并退出
- </p>
-<hr>
-<h2 id="2、在普通模式下编辑数据"><a href="#2、在普通模式下编辑数据" class="headerlink" title="2、在普通模式下编辑数据"></a>2、在普通模式下编辑数据</h2><p>x：删除当前光标所在位置的字符<br>dd：删除当前光标所在行<br>dw：删除当前光标所在位置的单词<br>d$：删除当前光标所在位置至行尾的内容<br>J：删除当前光标所在行行尾的换行符（拼接行）<br>u：撤销前一编辑命令<br>a：在当前光标后追加数据<br>A：在当前光标所在行行尾追加数据<br>r char：用char替换当前光标所在位置的单个字符<br>R text：用text覆盖当前光标所在位置的数据，直到按下ESC键<br>    有些编辑命令允许使用数字修饰符来指定重复该命令多少次，如：命令2x会删除从光标当前位置开始的两个字符，命令5dd会删除从光标当前所在行开始的5行。<br>    另外，vim编辑器在普通模式下通常会把删除键（Delete键）识别成x命令的功能，通常不识别退格键（Backspace键）。
- </p>
-<hr>
-<h2 id="3、复制和粘贴"><a href="#3、复制和粘贴" class="headerlink" title="3、复制和粘贴"></a>3、复制和粘贴</h2><pre><code>vim编辑器在删除数据时，实际上会将数据保存在单独的一个寄存器中，可以用p命令取回。例如，可以用dd命令删除一行文本，然后把光标移动到缓冲区的某个要放置该文本的地方，然后用p命令，该命令会将文本插入到当前光标所在行之后。
-</code></pre>
-<p>vim编辑器中复制命令是y（代表yank），可以在y命令后面使用和d命令相同的第二字符（如：yw代表复制一个单词，y$代表复制到行尾）。在复制文本后，把光标移动到想放置文本的地方，键入p命令，复制的文本就会出现在该位置。<br>复制命令一般在可视模式下使用。可视模式会在移动光标的同时高亮显示文本，键入v键可进入可视模式，如下图所示。<br>可先在可视模式下覆盖要复制的文本，然后键入y命令来激活复制命令，之后移动光标到要放置文本的位置，使用p命令将寄存器中的文本粘贴下来。
- </p>
-<hr>
-<h2 id="4、查找和替换"><a href="#4、查找和替换" class="headerlink" title="4、查找和替换"></a>4、查找和替换</h2><pre><code>vim编辑器在普通模式下，可使用/（斜线键）来查找文本。按下/后，光标会跑到消息行，然后vim会显示出斜线。输入要查找的文本，按下回车键便可完成查找。vim编辑器会采用以下三种回应中的一种：
+<h3 id="JSP运行原理"><a href="#JSP运行原理" class="headerlink" title="JSP运行原理"></a>JSP运行原理</h3><blockquote>
+<p>JSP的工作模式是请求/响应模式,客户端首先发出HTTP请求，JSP程序手打哦请求后进行处理并返回处理结果。在一个JSP文件第一次被请求时，JSP引擎（容器）把该JSP文件转换成为一个Servlet，而这个引擎本身也是一个Servlet。</p>
+</blockquote>
+<p><img src="/2021/06/07/JavawebNote/JSP_EL_jstl%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/images/JSP%E8%BD%AC%E6%8D%A2%E6%B5%81%E7%A8%8B.png" alt="JSP转换流程.png"></p>
+<p>JSP的运行过程具体如下：</p>
+<ol>
+<li><p>客户端发出请求，请求访问JSP文件。</p>
+</li>
+<li><p>JSP容器先将JSP文件转换成一个Java源文件（Java Servlet源程序），在转换过程中，如果发现JSP文件中存在任何语法错误，则中断转换过程，并向服务端和客户端返回出错信息。</p>
+</li>
+<li><p>如果转换成功，则JSP容器将生成的Java源文件编译成相应的字节码文件*.class。该class文件就是一个Servlet，Servlet容器会像处理其他Servlet一样来处理它。</p>
+<p><strong>注意：若是文件中存在JSTL或者EL表达式的话，那么在何时解析这些变量呢？答案是在将JSP文件解析成对应的Java源文件的时候就对JSTL或者EL表达式进行解析了，也就是说，当从服务器往浏览器写出页面内容时，JSTL或者EL中的变量就已经被解析成具体的值了。</strong></p>
+</li>
+</ol>
+<h3 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>out</td>
+<td>javax.servlet.jsp.JspWriter</td>
+<td>用于页面输出</td>
+</tr>
+<tr>
+<td>request</td>
+<td>javax.servlet.http.HttpServletReqeust</td>
+<td>得到用户请求信息</td>
+</tr>
+<tr>
+<td>response</td>
+<td>javax.servlet.http.HttpServletResponse</td>
+<td>服气器向客户端的回应信息</td>
+</tr>
+<tr>
+<td>config</td>
+<td>javax.servlet.ServletConfig</td>
+<td>服务器配置，可以取得初始化参数</td>
+</tr>
+<tr>
+<td>session</td>
+<td>javax.servlet.http.HttpSession</td>
+<td>用来保存用户的信息</td>
+</tr>
+<tr>
+<td>application</td>
+<td>jaax.servlet.ServletContext</td>
+<td>所有用户的共享信息</td>
+</tr>
+<tr>
+<td>page</td>
+<td>java.lang.Object</td>
+<td>指当前页面转换后的Servlet类的实例</td>
+</tr>
+<tr>
+<td>exception</td>
+<td>java.lang.Throwable</td>
+<td>表示JSP页面所发生的异常，在错误页中才起作用</td>
+</tr>
+<tr>
+<td>pageContext</td>
+<td>javax.servlet.jsp.PageContext</td>
+<td>JSP的页面容器</td>
+</tr>
+</tbody></table>
+<h3 id="EL表达式"><a href="#EL表达式" class="headerlink" title="EL表达式"></a>EL表达式</h3><blockquote>
+<p>一般的都是先将数据存储到Session,request,ServletContext等域对象中，再利用EL表达式来获取。</p>
+</blockquote>
+<ul>
+<li>语法<ul>
+<li>以”${“符号开始，以”}”符号结束，具体格式：<code> $&#123;表达式&#125;</code> 。</li>
+</ul>
+</li>
+<li>获取数据<ul>
+<li>类似page.findAttribute(); 先从page域中查找，没有找到去request域中查询，没找到去session域中找，没找到就去application域中找。</li>
+</ul>
+</li>
+<li>注意：1. 在用EL表达式获取数据时，必须保证该数据存在于四个域对象其中的一个。 2. 在获取数据时，一定不要忘记加${}。</li>
+</ul>
+<h3 id="JSTL表达式"><a href="#JSTL表达式" class="headerlink" title="JSTL表达式"></a>JSTL表达式</h3><ul>
+<li>使用时务必注意不要忘记导入JSTL的jar包：<code>jstl.jar</code> 和<code> standard.jar</code> 。</li>
+<li>要使用taglib指令导入Core标签库：<code>&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot; %&gt;</code> 。</li>
+</ul>
+<h4 id="c-forEach标签"><a href="#c-forEach标签" class="headerlink" title="c:forEach标签"></a>c:forEach标签</h4><ul>
+<li>语法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;c:forEach [var&#x3D;&quot;varName&quot; items&#x3D;&quot;collection&quot; [varStatus&#x3D;&quot;varStatusName&quot;] [begin&#x3D;&quot;begin&quot;] [end&#x3D;&quot;end&quot;] [step&#x3D;&quot;step&quot;]&gt;</span><br><span class="line">	$&#123;varName&#125;</span><br><span class="line">&lt;&#x2F;c:forEach&gt;</span><br></pre></td></tr></table></figure>
 
-如果要查找的文本出现在光标位置之后，则光标会跳到该文本出现的第一个位置。
-如果要查找的文本未在光标当前位置之后出现，则光标会绕过文件末尾，出现在该文本所在的第一个位置（并用一条消息指明）。
-</code></pre>
-<p>输出一条错误消息，说明在文件中没有找到要查找的文本。<br>    要继续查找同一个文本，可键入/（斜线键），然后键入回车键。或者键入n命令，表示下一个（next）。<br>vim编辑器在命令行模式下可使用替换命令。替换命令的格式是：:s/old/new/。vim编辑器会跳到old第一次出现的地方，并用new来替换。还可用以下命令来替换多处文本：</p>
-<p>:s/old/new/g ：替换一行中的所有old<br>:n,ms:/old/new/g ：替换行号n和m之间的所有old<br>:%s/old/new/g ：替换整个文件中的所有old<br>:%s/old/new/gc ：替换整个文件中的所有old，但在每次出现时提示，询问是否要替换<br> <br>    以上便是博主对vim编辑器一些基本用法的总结，熟悉以上vim的基本操作之后，便可使用vim高效地完成日常文本文件的编辑。</p>
+<ul>
+<li><p>参数解释</p>
+<ul>
+<li>var属性用于指将当前迭代到的元素保存到page域中的名称</li>
+<li>items属性用于指定将要迭代的集合对象</li>
+<li>varStatus用于指定当前迭代状态信息的对象保存到page域中的名称</li>
+<li>begin属性用于指定从集合中第几个元素开始迭代，begin的索引值从0开始，如果没有指定items属性，就从begin指定的值开始迭代，知道迭代结束为止</li>
+<li>step属性用于指定迭代的步长，即迭代因子的增量</li>
+</ul>
+</li>
+<li><p>实例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;c:forEach items&#x3D;&quot;$&#123;userMap&#125;&quot; var&#x3D;&quot;entry&quot;&gt;</span><br><span class="line">     $&#123;entry.key&#125;&#x3D;&#x3D;&#x3D;&#x3D;$&#123;entry.value&#125;</span><br><span class="line"> &lt;&#x2F;c:forEach&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>注意：items里面需要使用到EL表达式的时候，一定不要忘记加${}</p>
+</li>
+</ul>
 
       
 
@@ -284,7 +355,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/04/21/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/07/JavawebNote/JSP_EL_jstl%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -298,7 +369,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/06/07/JavawebNote/Ajax%E4%B8%8EJSON%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/06/07/JavawebNote/JDBC%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -307,6 +378,11 @@
       </div>
     </a>
   
+  
+    <a href="/2021/06/07/JavawebNote/JavaScript%E5%92%8CjQuery%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

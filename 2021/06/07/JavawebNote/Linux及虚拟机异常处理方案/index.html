@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>vim编辑器的基本使用 | 胡贵冬的笔记</title>
+  <title>胡贵冬的笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#vim编辑器的基本使用    vi编辑器是Unix系统最初的编辑器。它使用控制台图形模式来模拟文本编辑窗口，允许查看文件中的行、在文件中移动、插入、编辑和替换文本。尽管它可能是世界上最复杂的编辑器（至少讨厌它的人是这么认为的），但其拥有的大量特性使其成为Unix系统管理员多年来的支柱性工具。在GNU项目将vi编辑器移植到开源世界时，他们决定对其作一些改进。由于它不再是以前Unix中的那个原始的v">
+  <meta name="description" content="前言 Linux以及redis这两个章节牵涉到的主要是软件的安装以及命令的操作，这些东西没必要再进行二次总结，若有遗忘的话直接回头复习讲师的Linux入门.pdf文档即可，特别是命令只有用的多了才能记的牢，初学者在学到这里的时候最容易出现的状况是安装软件出现异常，但是无法自己独立解决异常导致自己没办法接着向下学习，因此本文对异常状况做出了总结，希望对初学者有所帮助，另外本文主要解决的是CentOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim编辑器的基本使用">
-<meta property="og:url" content="http://example.com/2021/04/21/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:title" content="胡贵冬的笔记">
+<meta property="og:url" content="http://example.com/2021/06/07/JavawebNote/Linux%E5%8F%8A%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%96%B9%E6%A1%88/index.html">
 <meta property="og:site_name" content="胡贵冬的笔记">
-<meta property="og:description" content="#vim编辑器的基本使用    vi编辑器是Unix系统最初的编辑器。它使用控制台图形模式来模拟文本编辑窗口，允许查看文件中的行、在文件中移动、插入、编辑和替换文本。尽管它可能是世界上最复杂的编辑器（至少讨厌它的人是这么认为的），但其拥有的大量特性使其成为Unix系统管理员多年来的支柱性工具。在GNU项目将vi编辑器移植到开源世界时，他们决定对其作一些改进。由于它不再是以前Unix中的那个原始的v">
+<meta property="og:description" content="前言 Linux以及redis这两个章节牵涉到的主要是软件的安装以及命令的操作，这些东西没必要再进行二次总结，若有遗忘的话直接回头复习讲师的Linux入门.pdf文档即可，特别是命令只有用的多了才能记的牢，初学者在学到这里的时候最容易出现的状况是安装软件出现异常，但是无法自己独立解决异常导致自己没办法接着向下学习，因此本文对异常状况做出了总结，希望对初学者有所帮助，另外本文主要解决的是CentOS">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-20T16:53:17.000Z">
-<meta property="article:modified_time" content="2021-04-21T16:03:59.860Z">
+<meta property="article:published_time" content="2021-06-07T02:02:33.459Z">
+<meta property="article:modified_time" content="2021-06-07T02:02:33.459Z">
 <meta property="article:author" content="胡贵冬">
 <meta name="twitter:card" content="summary">
   
@@ -154,52 +154,34 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-vim编辑器的基本使用" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JavawebNote/Linux及虚拟机异常处理方案" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      vim编辑器的基本使用
-    </h1>
-  
-
-        
-        <a href="/2021/04/21/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2021-04-20T16:53:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-21</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#vim编辑器的基本使用<br>    vi编辑器是Unix系统最初的编辑器。它使用控制台图形模式来模拟文本编辑窗口，允许查看文件中的行、在文件中移动、插入、编辑和替换文本。尽管它可能是世界上最复杂的编辑器（至少讨厌它的人是这么认为的），但其拥有的大量特性使其成为Unix系统管理员多年来的支柱性工具。在GNU项目将vi编辑器移植到开源世界时，他们决定对其作一些改进。由于它不再是以前Unix中的那个原始的vi编辑器了，开发人员也就将他重命名为vi improved, 或vim。</p>
-<hr>
-<h2 id="1-vim的基本使用"><a href="#1-vim的基本使用" class="headerlink" title="1.vim的基本使用"></a>1.vim的基本使用</h2><p><strong>vim 文件名</strong>        启动vim编辑器<br>vim编辑器有两种操作模式：</p>
-<ul>
-<li>普通模式</li>
-<li>插入模式<br>  刚启动vim编辑器，默认进入普通模式，在这个模式下，vim编辑器会将按键解释成命令（这也是vim特殊的地方，很多没有使用过vim的人刚开始打开vim时会被这个模式吓倒，毕竟在键盘上按键但一点反应都没有的编辑器实在是少见）。<br>在普通模式下键入i可进入插入模式（insert。事实上，键入a或者s也可进入插入模式），在插入模式下，vim会将你在光标位置输入的每个键都插入到缓冲区（也就是直接输入到文本中，并在屏幕上打印出来）。要退出插入模式返回普通模式话，就要键入退出键（ESC键，也就是Escape键）。<br>在普通模式下，若是vim能正确识别你的终端类型（正常情况下应该都可以的），就可以直接使用方向键在文本区域移动光标。<br>vim也有独有的用来移动光标的命令。</li>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><ul>
+<li>Linux以及redis这两个章节牵涉到的主要是软件的安装以及命令的操作，这些东西没必要再进行二次总结，若有遗忘的话直接回头复习讲师的Linux入门.pdf文档即可，特别是命令只有用的多了才能记的牢，初学者在学到这里的时候最容易出现的状况是安装软件出现异常，但是无法自己独立解决异常导致自己没办法接着向下学习，因此本文对异常状况做出了总结，希望对初学者有所帮助，另外本文主要解决的是CentOS6.5中出现的问题，对于CentOS7及其以上的版本有部分解决方案不适用。</li>
 </ul>
-<p>h：左移一个字符<br>j ：下移一个字符<br>k：上移一个字符<br>l ：右移一个字符<br>Ctrl+F（PageDown）：下翻一屏<br>Ctrl+B（PageUp）：上翻一屏<br>G：移到缓冲区最后一行<br>num G：移到缓冲区第num行<br>gg：移到缓冲区第一行<br>vim编辑器在普通模式下可按冒号键：进入命令行模式，可以输入额外的命令来控制vim的行为。</p>
-<p>q：如果未修改缓冲区数据，退出<br>q！：取消所有对缓冲区数据的修改并退出<br>w filename：将文件保存到另一个文件中<br>wq：将缓冲区数据保存到文件中并退出
- </p>
-<hr>
-<h2 id="2、在普通模式下编辑数据"><a href="#2、在普通模式下编辑数据" class="headerlink" title="2、在普通模式下编辑数据"></a>2、在普通模式下编辑数据</h2><p>x：删除当前光标所在位置的字符<br>dd：删除当前光标所在行<br>dw：删除当前光标所在位置的单词<br>d$：删除当前光标所在位置至行尾的内容<br>J：删除当前光标所在行行尾的换行符（拼接行）<br>u：撤销前一编辑命令<br>a：在当前光标后追加数据<br>A：在当前光标所在行行尾追加数据<br>r char：用char替换当前光标所在位置的单个字符<br>R text：用text覆盖当前光标所在位置的数据，直到按下ESC键<br>    有些编辑命令允许使用数字修饰符来指定重复该命令多少次，如：命令2x会删除从光标当前位置开始的两个字符，命令5dd会删除从光标当前所在行开始的5行。<br>    另外，vim编辑器在普通模式下通常会把删除键（Delete键）识别成x命令的功能，通常不识别退格键（Backspace键）。
- </p>
-<hr>
-<h2 id="3、复制和粘贴"><a href="#3、复制和粘贴" class="headerlink" title="3、复制和粘贴"></a>3、复制和粘贴</h2><pre><code>vim编辑器在删除数据时，实际上会将数据保存在单独的一个寄存器中，可以用p命令取回。例如，可以用dd命令删除一行文本，然后把光标移动到缓冲区的某个要放置该文本的地方，然后用p命令，该命令会将文本插入到当前光标所在行之后。
-</code></pre>
-<p>vim编辑器中复制命令是y（代表yank），可以在y命令后面使用和d命令相同的第二字符（如：yw代表复制一个单词，y$代表复制到行尾）。在复制文本后，把光标移动到想放置文本的地方，键入p命令，复制的文本就会出现在该位置。<br>复制命令一般在可视模式下使用。可视模式会在移动光标的同时高亮显示文本，键入v键可进入可视模式，如下图所示。<br>可先在可视模式下覆盖要复制的文本，然后键入y命令来激活复制命令，之后移动光标到要放置文本的位置，使用p命令将寄存器中的文本粘贴下来。
- </p>
-<hr>
-<h2 id="4、查找和替换"><a href="#4、查找和替换" class="headerlink" title="4、查找和替换"></a>4、查找和替换</h2><pre><code>vim编辑器在普通模式下，可使用/（斜线键）来查找文本。按下/后，光标会跑到消息行，然后vim会显示出斜线。输入要查找的文本，按下回车键便可完成查找。vim编辑器会采用以下三种回应中的一种：
-
-如果要查找的文本出现在光标位置之后，则光标会跳到该文本出现的第一个位置。
-如果要查找的文本未在光标当前位置之后出现，则光标会绕过文件末尾，出现在该文本所在的第一个位置（并用一条消息指明）。
-</code></pre>
-<p>输出一条错误消息，说明在文件中没有找到要查找的文本。<br>    要继续查找同一个文本，可键入/（斜线键），然后键入回车键。或者键入n命令，表示下一个（next）。<br>vim编辑器在命令行模式下可使用替换命令。替换命令的格式是：:s/old/new/。vim编辑器会跳到old第一次出现的地方，并用new来替换。还可用以下命令来替换多处文本：</p>
-<p>:s/old/new/g ：替换一行中的所有old<br>:n,ms:/old/new/g ：替换行号n和m之间的所有old<br>:%s/old/new/g ：替换整个文件中的所有old<br>:%s/old/new/gc ：替换整个文件中的所有old，但在每次出现时提示，询问是否要替换<br> <br>    以上便是博主对vim编辑器一些基本用法的总结，熟悉以上vim的基本操作之后，便可使用vim高效地完成日常文本文件的编辑。</p>
+<h3 id="异常状况"><a href="#异常状况" class="headerlink" title="异常状况"></a>异常状况</h3><h5 id="网卡丢失："><a href="#网卡丢失：" class="headerlink" title="网卡丢失："></a>网卡丢失：</h5><ul>
+<li>异常描述：输入ifconfig，展示出的网络信息中没有IPV4的地址</li>
+</ul>
+<ul>
+<li>cd /etc/sysconfig/network-scripts/    vim ifcfg-eth0    然后修改onBOOT=yes    wq保存</li>
+<li>service network restart重启网络</li>
+<li>若重启失败，或者重启后输入ifconfig仍然没有IP地址，那么先将当前系统挂起或关闭，然后点击VMware的编辑选项，选择虚拟网络编辑器，在弹出的窗口中点击还原默认设置(若此按钮为灰色只需先点击更改设置按钮即可)，确定还原</li>
+<li>还原完毕后将虚拟机打开，再次输入service network restart重启网络</li>
+<li>若仍然重启失败或重启后输入ifconfig还没有IP地址，那么打开电脑的网络和Internate设置(你自己的本机电脑，非虚拟机)，选择进入更改适配器选项，查看当前网卡中是否存在VMware Network Adapter Vmnet1以及VMware Network Adapter Vmnet8网卡，若存在，但是状态为禁用状态，右键改为启用状态，然后再进入虚拟机网络中重启网络即可。若适配器中不包含以上两个虚拟网卡，移步看<strong>虚拟网卡无法创建</strong> 一栏的解决方案。</li>
+</ul>
+<h5 id="ls命令找不到"><a href="#ls命令找不到" class="headerlink" title="ls命令找不到"></a>ls命令找不到</h5><ul>
+<li>```<br>export PATH=/bin:/usr/bin:$PATH<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#####虚拟网卡无法创建：</span><br><span class="line"></span><br><span class="line">* 卸载VMware，然后再安装Ccleaner(网上下载即可)清注册表，重启电脑，然后安装VMware12。若还不行，再重启电脑，若还还不行，重装系统。</span><br><span class="line"></span><br><span class="line">#####yum install gcc-c++失败</span><br><span class="line"></span><br><span class="line">* 遇见这个问题请先确保电脑已联网，并且当前虚拟机网络模式为NAT模式</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* vim &#x2F;etc&#x2F;resolv.conf</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+; generated by /sbin/dhclient-script<br>search localdomain<br>nameserver 192.168.84.2<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  若该文件中没有上述内容，添加，若有则在该内容下再加一条：</span><br><span class="line"></span><br><span class="line">  nameserver 8.8.8.8 然后Esc   wq保存再尝试安装gcc若还不行则将文本中的namerserver 192.169.84.2删掉，只保留nameserver 8.8.8.8保存再尝试安装</span><br><span class="line"></span><br><span class="line">#####-bash: rpm:command not found</span><br><span class="line"></span><br><span class="line">* 尝试&#x2F;bin&#x2F;rpm --version 能否获得RPM version 4.8.0的结果，若可以很可能是$PATH出了问题，执行 **ls命令找不到** 下面的解决方案  若不能获得该结果则尝试以下代码块：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="execute-all-following-commands-as-root-especially-“cpio”-at-the-end"><a href="#execute-all-following-commands-as-root-especially-“cpio”-at-the-end" class="headerlink" title="execute all following commands as root, especially “cpio” at the end"></a>execute all following commands as root, especially “cpio” at the end</h1>cd /<br>wget <a target="_blank" rel="noopener" href="http://centos.bio.lmu.de/6/os/x86_64/Packages/rpm-4.8.0-32.el6.x86_64.rpm">http://centos.bio.lmu.de/6/os/x86_64/Packages/rpm-4.8.0-32.el6.x86_64.rpm</a><br>rpm2cpio rpm-4.8.0-32.el6.x86_64.rpm | cpio -idmv<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  ​</span><br><span class="line"></span><br><span class="line">#####虚拟机物理内存不足，无法开启已挂起的系统</span><br><span class="line"></span><br><span class="line">* ![](..&#x2F;images&#x2F;VMware物理内存不足,无法使用.png)</span><br><span class="line"></span><br><span class="line">#####该虚拟机似乎正在使用中 请获取所有权。</span><br><span class="line"></span><br><span class="line">* 关掉VMware所有窗口，然后进入任务管理器中干掉VMware Tray Process进程，然后进入到存放此台Vmware虚拟机虚拟磁盘文件及配置文件存放的位置（也就是弹出提示窗口上的路径），找到后缀为.lck文件夹(有可能有一个，也有可能有两个)。将其全部删掉，再开启VMware即可。</span><br><span class="line"></span><br><span class="line">#####内部错误。</span><br><span class="line"></span><br><span class="line">* 很有可能是VM服务没有启动（可能是没有设置为开机自启或认为关闭），你可以进入 “服务”将VMAuthdService、VMnetDHCP、VMware NAT Service、VMwareHostd（VMware Workstation Server）、VMUSBArbService 这5个服务启动即可。</span><br><span class="line"></span><br><span class="line">  进入服务方法：win+R都是运行，输入services.msc，win8是打开任务管理器，然后选择“服务”。</span><br><span class="line"></span><br><span class="line">#####无法获得VMCI驱动程序的版本：句柄无效或者开启模块DevicePowerOn的操作失败。</span><br><span class="line"></span><br><span class="line">* 关闭虚拟机，找到安装路径，用记事本打开.vmx结尾的文件</span><br><span class="line">* 找到vmci0.persent &#x3D; &quot;TRUE&quot;</span><br><span class="line">* 把TRUE改为FALSE，保存，再次打开虚拟机，问题即可解决</span><br><span class="line"></span><br><span class="line">#####虚拟机报错：VMware与Hyper-V不兼容。</span><br><span class="line"></span><br><span class="line">* 进入控制面板</span><br><span class="line">* 选择程序和功能</span><br><span class="line">* 启用或关闭Windows功能</span><br><span class="line">* 找到Hyper-V的选项</span><br><span class="line">* 取消勾选，点击确定</span><br><span class="line">* 重启电脑</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#####Linux中MySQL乱码问题：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+mysql解决中文乱码的完美配置方案：</li>
+</ul>
+<p>1.在/etc/下新建my.cnf文件<br>2.在其中添加如下内容，注意：以下三项一项都不能少！不然会造成mysql重启失败！！！</p>
+<p>[client]<br>default-character-set=utf8<br>[mysql]<br>default-character-set=utf8<br>[mysqld]<br>collation-server=utf8_unicode_ci<br>init-connect=’SET NAMES utf8’<br>character-set-server=utf8</p>
+<p>3.保存并退出。<br>4.重启mysql服务器  service mysql restart.<br>5.进入mysql,输入命令：SHOW VARIABLES LIKE ‘char%’;进行验证<br>6.若character_set_database的值为utf8,并且charcter_set_server的值也为utf8,恭喜你，中文乱码问题已解决！！</p>
+<p>```<br>**注意：若在本机写好了一个web工程项目，想要将其发布到Linux中的tomcat中去运行，必须要保证电脑本机中的JDK版本与虚拟机中的JDK版本一致！！！ **</p>
 
       
 
@@ -284,7 +266,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/04/21/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/07/JavawebNote/Linux%E5%8F%8A%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%96%B9%E6%A1%88/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -298,7 +280,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/06/07/JavawebNote/Ajax%E4%B8%8EJSON%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/06/07/JavawebNote/JavaScript%E5%92%8CjQuery%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -307,6 +289,11 @@
       </div>
     </a>
   
+  
+    <a href="/2021/06/07/JavawebNote/Cookie%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

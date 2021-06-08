@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>vim编辑器的基本使用 | 胡贵冬的笔记</title>
+  <title>胡贵冬的笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#vim编辑器的基本使用    vi编辑器是Unix系统最初的编辑器。它使用控制台图形模式来模拟文本编辑窗口，允许查看文件中的行、在文件中移动、插入、编辑和替换文本。尽管它可能是世界上最复杂的编辑器（至少讨厌它的人是这么认为的），但其拥有的大量特性使其成为Unix系统管理员多年来的支柱性工具。在GNU项目将vi编辑器移植到开源世界时，他们决定对其作一些改进。由于它不再是以前Unix中的那个原始的v">
+  <meta name="description" content="给初学者的建议 先说下JavaWeb后台服务器,JavaWeb后台服务器主要做的事情其实就是从用户那里接收到数据,然后按照需求,经过一系列逻辑处理存储将数据存储到数据库,或者是按照需求从数据库中取出数据并进行处理后展示到前台页面.由此可见采用Java语言做到与数据库之间的交互是非常重要的,而JDBC是Java为了操作数据库定义的一套规范.就包括之后要学的Hibernate框架以及Mybatis框架">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim编辑器的基本使用">
-<meta property="og:url" content="http://example.com/2021/04/21/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:title" content="胡贵冬的笔记">
+<meta property="og:url" content="http://example.com/2021/06/07/JavawebNote/JDBC%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/index.html">
 <meta property="og:site_name" content="胡贵冬的笔记">
-<meta property="og:description" content="#vim编辑器的基本使用    vi编辑器是Unix系统最初的编辑器。它使用控制台图形模式来模拟文本编辑窗口，允许查看文件中的行、在文件中移动、插入、编辑和替换文本。尽管它可能是世界上最复杂的编辑器（至少讨厌它的人是这么认为的），但其拥有的大量特性使其成为Unix系统管理员多年来的支柱性工具。在GNU项目将vi编辑器移植到开源世界时，他们决定对其作一些改进。由于它不再是以前Unix中的那个原始的v">
+<meta property="og:description" content="给初学者的建议 先说下JavaWeb后台服务器,JavaWeb后台服务器主要做的事情其实就是从用户那里接收到数据,然后按照需求,经过一系列逻辑处理存储将数据存储到数据库,或者是按照需求从数据库中取出数据并进行处理后展示到前台页面.由此可见采用Java语言做到与数据库之间的交互是非常重要的,而JDBC是Java为了操作数据库定义的一套规范.就包括之后要学的Hibernate框架以及Mybatis框架">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-20T16:53:17.000Z">
-<meta property="article:modified_time" content="2021-04-21T16:03:59.860Z">
+<meta property="article:published_time" content="2021-06-07T02:02:33.459Z">
+<meta property="article:modified_time" content="2021-06-07T02:02:33.459Z">
 <meta property="article:author" content="胡贵冬">
 <meta name="twitter:card" content="summary">
   
@@ -154,52 +154,69 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-vim编辑器的基本使用" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JavawebNote/JDBC核心知识点汇总" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      vim编辑器的基本使用
-    </h1>
-  
-
-        
-        <a href="/2021/04/21/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2021-04-20T16:53:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-21</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#vim编辑器的基本使用<br>    vi编辑器是Unix系统最初的编辑器。它使用控制台图形模式来模拟文本编辑窗口，允许查看文件中的行、在文件中移动、插入、编辑和替换文本。尽管它可能是世界上最复杂的编辑器（至少讨厌它的人是这么认为的），但其拥有的大量特性使其成为Unix系统管理员多年来的支柱性工具。在GNU项目将vi编辑器移植到开源世界时，他们决定对其作一些改进。由于它不再是以前Unix中的那个原始的vi编辑器了，开发人员也就将他重命名为vi improved, 或vim。</p>
-<hr>
-<h2 id="1-vim的基本使用"><a href="#1-vim的基本使用" class="headerlink" title="1.vim的基本使用"></a>1.vim的基本使用</h2><p><strong>vim 文件名</strong>        启动vim编辑器<br>vim编辑器有两种操作模式：</p>
-<ul>
-<li>普通模式</li>
-<li>插入模式<br>  刚启动vim编辑器，默认进入普通模式，在这个模式下，vim编辑器会将按键解释成命令（这也是vim特殊的地方，很多没有使用过vim的人刚开始打开vim时会被这个模式吓倒，毕竟在键盘上按键但一点反应都没有的编辑器实在是少见）。<br>在普通模式下键入i可进入插入模式（insert。事实上，键入a或者s也可进入插入模式），在插入模式下，vim会将你在光标位置输入的每个键都插入到缓冲区（也就是直接输入到文本中，并在屏幕上打印出来）。要退出插入模式返回普通模式话，就要键入退出键（ESC键，也就是Escape键）。<br>在普通模式下，若是vim能正确识别你的终端类型（正常情况下应该都可以的），就可以直接使用方向键在文本区域移动光标。<br>vim也有独有的用来移动光标的命令。</li>
+        <h3 id="给初学者的建议"><a href="#给初学者的建议" class="headerlink" title="给初学者的建议"></a>给初学者的建议</h3><ul>
+<li>先说下JavaWeb后台服务器,JavaWeb后台服务器主要做的事情其实就是从用户那里接收到数据,然后按照需求,经过一系列逻辑处理存储将数据存储到数据库,或者是按照需求从数据库中取出数据并进行处理后展示到前台页面.由此可见采用Java语言做到与数据库之间的交互是非常重要的,而JDBC是Java为了操作数据库定义的一套规范.就包括之后要学的Hibernate框架以及Mybatis框架都是在JDBC的基础上再次进行封装的,可以说要想通过Java去操作数据库,必须用到JDBC规范,因此理解并掌握JDBC相关知识是至关重要的.</li>
 </ul>
-<p>h：左移一个字符<br>j ：下移一个字符<br>k：上移一个字符<br>l ：右移一个字符<br>Ctrl+F（PageDown）：下翻一屏<br>Ctrl+B（PageUp）：上翻一屏<br>G：移到缓冲区最后一行<br>num G：移到缓冲区第num行<br>gg：移到缓冲区第一行<br>vim编辑器在普通模式下可按冒号键：进入命令行模式，可以输入额外的命令来控制vim的行为。</p>
-<p>q：如果未修改缓冲区数据，退出<br>q！：取消所有对缓冲区数据的修改并退出<br>w filename：将文件保存到另一个文件中<br>wq：将缓冲区数据保存到文件中并退出
- </p>
-<hr>
-<h2 id="2、在普通模式下编辑数据"><a href="#2、在普通模式下编辑数据" class="headerlink" title="2、在普通模式下编辑数据"></a>2、在普通模式下编辑数据</h2><p>x：删除当前光标所在位置的字符<br>dd：删除当前光标所在行<br>dw：删除当前光标所在位置的单词<br>d$：删除当前光标所在位置至行尾的内容<br>J：删除当前光标所在行行尾的换行符（拼接行）<br>u：撤销前一编辑命令<br>a：在当前光标后追加数据<br>A：在当前光标所在行行尾追加数据<br>r char：用char替换当前光标所在位置的单个字符<br>R text：用text覆盖当前光标所在位置的数据，直到按下ESC键<br>    有些编辑命令允许使用数字修饰符来指定重复该命令多少次，如：命令2x会删除从光标当前位置开始的两个字符，命令5dd会删除从光标当前所在行开始的5行。<br>    另外，vim编辑器在普通模式下通常会把删除键（Delete键）识别成x命令的功能，通常不识别退格键（Backspace键）。
- </p>
-<hr>
-<h2 id="3、复制和粘贴"><a href="#3、复制和粘贴" class="headerlink" title="3、复制和粘贴"></a>3、复制和粘贴</h2><pre><code>vim编辑器在删除数据时，实际上会将数据保存在单独的一个寄存器中，可以用p命令取回。例如，可以用dd命令删除一行文本，然后把光标移动到缓冲区的某个要放置该文本的地方，然后用p命令，该命令会将文本插入到当前光标所在行之后。
-</code></pre>
-<p>vim编辑器中复制命令是y（代表yank），可以在y命令后面使用和d命令相同的第二字符（如：yw代表复制一个单词，y$代表复制到行尾）。在复制文本后，把光标移动到想放置文本的地方，键入p命令，复制的文本就会出现在该位置。<br>复制命令一般在可视模式下使用。可视模式会在移动光标的同时高亮显示文本，键入v键可进入可视模式，如下图所示。<br>可先在可视模式下覆盖要复制的文本，然后键入y命令来激活复制命令，之后移动光标到要放置文本的位置，使用p命令将寄存器中的文本粘贴下来。
- </p>
-<hr>
-<h2 id="4、查找和替换"><a href="#4、查找和替换" class="headerlink" title="4、查找和替换"></a>4、查找和替换</h2><pre><code>vim编辑器在普通模式下，可使用/（斜线键）来查找文本。按下/后，光标会跑到消息行，然后vim会显示出斜线。输入要查找的文本，按下回车键便可完成查找。vim编辑器会采用以下三种回应中的一种：
+<h3 id="JDBC开发步骤★★★★★"><a href="#JDBC开发步骤★★★★★" class="headerlink" title="JDBC开发步骤★★★★★"></a>JDBC开发步骤★★★★★</h3><blockquote>
+<p>JDBC开发步骤必须牢记!!!</p>
+</blockquote>
+<ol>
+<li>注册驱动</li>
+<li>获得连接</li>
+<li>获取执行SQL语句的对象</li>
+<li>执行SQL语句</li>
+<li>处理结果</li>
+<li>释放资源</li>
+</ol>
+<p><strong>注意:注册驱动这块即<code> Class.forName(&quot;com.mysql.jdbc.Driver&quot;)</code>在MySQL驱动jar包驱动版本为5.1以上后也是可以省略的,但是jar包版本为5.0及其以下必须要手动声明,因此为了更好的兼容性,建议在开发过程中还是将<code> Class.forName(&quot;com.mysql.jdbc.Driver&quot;)</code> 加上.</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">代码实现:</span><br><span class="line"><span class="keyword">package</span> com.itheima;</span><br><span class="line"><span class="keyword">import</span> java.sql.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Jdbc_Base</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Connection connection = <span class="keyword">null</span>;</span><br><span class="line">        PreparedStatement statement = <span class="keyword">null</span>;</span><br><span class="line">        ResultSet resultSet = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//1.注册驱动</span></span><br><span class="line">            Class.forName(<span class="string">&quot;com.mysql.jdbc.Driver&quot;</span>);</span><br><span class="line">            <span class="comment">//2.获取连接</span></span><br><span class="line">            String url = <span class="string">&quot;jdbc:mysql://localhost:3306/test1&quot;</span>;</span><br><span class="line">            String username = <span class="string">&quot;root&quot;</span>;</span><br><span class="line">            String password = <span class="string">&quot;123&quot;</span>;</span><br><span class="line">            connection = DriverManager.getConnection(url, username, password);</span><br><span class="line">          	System.out.println(<span class="string">&quot;Connection接口在此处的实际实现类为:&quot;</span>+connection.getClass().getName());</span><br><span class="line">            <span class="comment">//3.获取执行SQL语句的对象</span></span><br><span class="line">            String sql = <span class="string">&quot;SELECT * FROM user&quot;</span>;</span><br><span class="line">            statement = connection.prepareStatement(sql);</span><br><span class="line">            <span class="comment">//4.执行SQL语句</span></span><br><span class="line">            resultSet = statement.executeQuery();</span><br><span class="line">            <span class="comment">//5.处理结果</span></span><br><span class="line">            <span class="keyword">while</span> (resultSet.next()) &#123;</span><br><span class="line">                Object username1 = resultSet.getObject(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">                Object password1 = resultSet.getObject(<span class="string">&quot;password&quot;</span>);</span><br><span class="line">                System.out.println(username1+<span class="string">&quot;:&quot;</span>+password1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="comment">//6.关闭资源</span></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                resultSet.close();</span><br><span class="line">                statement.close();</span><br><span class="line">                connection.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-如果要查找的文本出现在光标位置之后，则光标会跳到该文本出现的第一个位置。
-如果要查找的文本未在光标当前位置之后出现，则光标会绕过文件末尾，出现在该文本所在的第一个位置（并用一条消息指明）。
-</code></pre>
-<p>输出一条错误消息，说明在文件中没有找到要查找的文本。<br>    要继续查找同一个文本，可键入/（斜线键），然后键入回车键。或者键入n命令，表示下一个（next）。<br>vim编辑器在命令行模式下可使用替换命令。替换命令的格式是：:s/old/new/。vim编辑器会跳到old第一次出现的地方，并用new来替换。还可用以下命令来替换多处文本：</p>
-<p>:s/old/new/g ：替换一行中的所有old<br>:n,ms:/old/new/g ：替换行号n和m之间的所有old<br>:%s/old/new/g ：替换整个文件中的所有old<br>:%s/old/new/gc ：替换整个文件中的所有old，但在每次出现时提示，询问是否要替换<br> <br>    以上便是博主对vim编辑器一些基本用法的总结，熟悉以上vim的基本操作之后，便可使用vim高效地完成日常文本文件的编辑。</p>
+<h3 id="Connection接口★★★"><a href="#Connection接口★★★" class="headerlink" title="Connection接口★★★"></a>Connection接口★★★</h3><ul>
+<li>思考:在上面的代码中<code> DriverManager.getConnection()</code> 的返回值是用<code> java.sql.Connection</code>这个接口接收的,因此此处肯定用到了多态,可以确定返回的对象肯定是实现了Connection接口的,那么这个返回的对象到底是谁呢?<ul>
+<li>答:若你不清楚,可以将上述代码复制一份到开发工具中进行运行,然后控制台会输出如下一句话:<code> Connection接口在此处的实际实现类为:com.mysql.jdbc.JDBC4Connection</code> 查看代码不难发现这句话得输出是<code> System.out.println(&quot;Connection接口在此处的实际实现类为:&quot;+connection.getClass().getName());</code> 控制的,由此可以看出Connection接口的实际实现类为<code> com.mysql.jdbc.JDBC4Connection</code> 根据类的全限定类名可以看出该类是在MySQL的驱动包中实现的.</li>
+</ul>
+</li>
+<li>接着上面的思考题接着思考:<code> java.sql.Connection connection = DriverManager.getConnection()</code> 接收返回值的时候并不是采用一个实际类的类型进行接收的,而是采用接口进行接收的,这样子做有什么意义或者好处呢?<ul>
+<li>答:请你思考这样一个场景,公司一开始做项目的时候是把数据存储在了MySQL数据库中,但是后来由于业务需要,要将数据迁移到Oracle数据库中,MySQL数据库弃置,那么,若是在此处开发的时候若是采用一个具体实现类来接收<code>DriverManager.getConnection()</code> 返回的对象的话,由于这个实际类存在于mysql-connector-java-bin.jar包中,开发者肯定要在当前类里导入该包,现在业务变更,那么开发者不得不重新重新打开当前页面重新进行导包操作….</li>
+</ul>
+</li>
+<li>综合思考: JAVA中定义JDBC接口规范的重要性及其意义到底在哪里?<ul>
+<li>若Java没有定义一套JDBC接口规范,那么诸如Oracle,MySQL,SQLserver等等数据库厂商在提供操作数据驱动的时候由于没有一个官方的统一文档,它们就会按照自己的想法去定义类名,定义方法名,定义它们自己的一套实现逻辑….当开发人员要进行数据库操作的时候,不得不记忆好几套开发逻辑,好多种方法….若是项目后期要进行数据库的更改,由于各个数据库厂商所定义的方法名都不相同,开发人员便不得不大段大段的修改代码…有了JDBC接口规范后,所有的数据库厂商全部实现接口规范,按照一套开发逻辑走,只要在实现具体功能的时候提供自家的方案就可以了,对于开发人员来讲,不用管每个数据库厂商是如何实现<code> getConnection()</code>方法,如何实现<code> connection.prepareStatement(sql);</code> 的,只需要按照JDBC的规范就可以很方便的操作多种数据库了.深入想下就会发现:多态这个特性在Java语言中是多么的重要~</li>
+</ul>
+</li>
+</ul>
+<h3 id="ResultSet接口★"><a href="#ResultSet接口★" class="headerlink" title="ResultSet接口★"></a>ResultSet接口★</h3><ul>
+<li>思考: <code> resultset.next()</code> 的意义?<ul>
+<li>答:通过jdbc操作获取结果集resultset后，可以认为结果集即为一个数据表，对结果集进行操作，可以认为结果集中存在一个“虚拟指针”，虚拟指针起初停在数据库的第0行。此行是一个特殊行，没有数据（），当执行一次rs.next()方法，指针就会往下移动一行，当遍历完所有行后rs.next()就会返回false。</li>
+</ul>
+</li>
+<li>思考:通过resultset结果集可以获取查询的数据的每一列的列名吗?可以获取查询出数据的总条数吗?如果能,应该怎么获取<ul>
+<li>答:是可以获取的,通过<code>resultset.getMetaData()</code>来获取,<code>getMetaData</code> 方法可以获取结果集对象列的个数,类型,参数. <code>metaData.getColumnCount() </code> 获取总列数,<code>metaData.getColumnName(int column)</code> 获取列名,<code>metaData.getColumnType(int column)</code> 获取每列字段的类型.</li>
+</ul>
+</li>
+</ul>
+<h3 id="JDBC事务★★★"><a href="#JDBC事务★★★" class="headerlink" title="JDBC事务★★★"></a>JDBC事务★★★</h3><ul>
+<li>确保多个对数据库的操作(比如对数据库增加一条数据,对数据库删除一条数据)在同一个事务中可以同时提交,同时回滚的注意事项<ul>
+<li>必须保证多个操作用的是同一个connection对象.</li>
+<li>必须要开启事务<code> connection.setAutoCommit(false)</code> .</li>
+</ul>
+</li>
+<li>JDBC进行事务操作的主要方法<ul>
+<li>开启事务<code> connection.setAutoCommit(false)</code></li>
+<li>提交事务<code> connection.commit()</code></li>
+<li>回滚事务<code> connection.rollback()</code></li>
+</ul>
+</li>
+<li>提问:为什么要保证多个操作使用同一个connection对象?<ul>
+<li>答:我们都知道,使用Navicat或者sqlyog(小海豚)都可以对数据库进行操作,那么Navicat或者sqlyog是什么呢?它们都是连接数据库的客户端,我们在打开这些客户端后需要输入用户名和密码,如果正确就可以连接成功并且进行数据的查询了,现在,类比于Java,我们每打开一个客户端,就等于与数据库建立了一个连接,也就等于在Java中获取了一个connection对象.也就是说一个connection对象就相当于打开了一个客户端然后和数据库建立了一条连接.现在,试想一下,若是你打开了一个sqlyog,然后开启事务,再然后插入一条数据,现在你再打开一个Navicat,然后开启事务,再然后删除一条数据,这时候,当你在sqlyog中提交事务后,Navicat中的数据会同步提交吗?答案是不会的,不相信的话,自己尝试下~~</li>
+</ul>
+</li>
+</ul>
 
       
 
@@ -284,7 +301,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/04/21/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/07/JavawebNote/JDBC%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -298,7 +315,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/06/07/JavawebNote/Ajax%E4%B8%8EJSON%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/06/07/JavawebNote/HTTP%E5%8D%8F%E8%AE%AE%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -307,6 +324,11 @@
       </div>
     </a>
   
+  
+    <a href="/2021/06/07/JavawebNote/JSP_EL_jstl%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
