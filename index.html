@@ -207,7 +207,6 @@
 <h2 id="Servlet线程安全"><a href="#Servlet线程安全" class="headerlink" title="Servlet线程安全"></a>Servlet线程安全</h2><h3 id="Servlet线程池"><a href="#Servlet线程池" class="headerlink" title="Servlet线程池"></a>Servlet线程池</h3><p>Tomcat内部有一个线程池，如果这个servlet的访 问量很大，一下子有100个人，全部过来了，tomcat 不会帮我们new出100个HelloWorldServlet的对象出来的，自始至终，这个对象只有一个，这个对象会提前准备出若干个线程，但是让一个 线程跑起来，是有开销的，有时开销我们都会感觉出来的，因为线程比较耗时，所以，让线程提前跑起来，这些跑起来的线程组成一个线程池。</p>
 <h3 id="如何解决Servlet线程安全？"><a href="#如何解决Servlet线程安全？" class="headerlink" title="如何解决Servlet线程安全？"></a>如何解决Servlet线程安全？</h3><p>如果某个Servlet实现了SingleThreadModel接口，那么Servlet引擎将以单线程模式来调用其service方法。但是本质上面并没有解决线程安全问题，因为其采用的方式是根据并发请求去产生多个Servlet实例对象，并发的每个线程分别调用一个独立的Servlet实例对象，而真正意义上解决多线程安全问题是指一个Servlet实例对象被多个线程同时调用的问题。而不是多个线程调用多个Servlet实例。<br>利用synchronized同步代码，将我们有并发问题的代码转化为同步代码，但是这样做的一个坏处就是，如果遇到高并发的情况下，我们的用户可能会因为同步代码的问题而造成等待的时间比较久这样的问题，所以，要慎用。<br>减少引起并发问题的资源代码，从根本上解决Servlet线程安全问题，其实，造成Servlet线程的问题好多都是因为变量设置不正确造成的，我们应该尽可能去避免这样的问题。</p>
 <h2 id="学习心得"><a href="#学习心得" class="headerlink" title="学习心得"></a>学习心得</h2><p>这一章节变得难了，开始了解代码的编写，方法的使用，发现问题，了解问题和解决问题的过程还是很难的，中间做了四次实验，到现在也没有完全理解学会，还是有报错，希望接下来能解决并理解。</p>
-<p><em>XMind - Trial Version</em></p>
 </servlet-class></servlet-name></servlet>
       
 
