@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021 | 胡贵冬的笔记</title>
+  <title>胡贵冬的笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="胡贵冬的笔记">
-<meta property="og:type" content="website">
+  <meta name="description" content="第五章Cookie与Session CookieCookie是什么？Cookie是由W3C组织提出，最早由netscape社区发展的一种机制网页之间的交互是通过HTTP协议传输数据的，而Http协议是无状态的协议。无状态的协议是什么意思呢？一旦数据提交完后，浏览器和服务器的连接就会关闭，再次交互的时候需要重新建立新的连接。服务器无法确认用户的信息，于是乎，W3C就提出了：给每一个用户都发一个通行证">
+<meta property="og:type" content="article">
 <meta property="og:title" content="胡贵冬的笔记">
-<meta property="og:url" content="http://example.com/archives/2021/index.html">
+<meta property="og:url" content="http://example.com/2021/06/09/%E7%AC%AC%E4%BA%94%E7%AB%A0Cookie%E4%B8%8ESession/index.html">
 <meta property="og:site_name" content="胡贵冬的笔记">
-<meta property="og:description" content="胡贵冬的笔记">
+<meta property="og:description" content="第五章Cookie与Session CookieCookie是什么？Cookie是由W3C组织提出，最早由netscape社区发展的一种机制网页之间的交互是通过HTTP协议传输数据的，而Http协议是无状态的协议。无状态的协议是什么意思呢？一旦数据提交完后，浏览器和服务器的连接就会关闭，再次交互的时候需要重新建立新的连接。服务器无法确认用户的信息，于是乎，W3C就提出了：给每一个用户都发一个通行证">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/06/09/%E7%AC%AC%E4%BA%94%E7%AB%A0Cookie%E4%B8%8ESession/%E7%AC%AC%E4%BA%94%E7%AB%A0%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png">
+<meta property="article:published_time" content="2021-06-09T08:57:06.816Z">
+<meta property="article:modified_time" content="2021-06-09T08:57:06.816Z">
 <meta property="article:author" content="胡贵冬">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/06/09/%E7%AC%AC%E4%BA%94%E7%AB%A0Cookie%E4%B8%8ESession/%E7%AC%AC%E4%BA%94%E7%AB%A0%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png">
   
     <link rel="alternative" href="/atom.xml" title="胡贵冬的笔记" type="application/atom+xml">
   
@@ -152,154 +156,169 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-第五章Cookie与Session" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第五章Cookie与Session"><a href="#第五章Cookie与Session" class="headerlink" title="第五章Cookie与Session"></a>第五章Cookie与Session</h1><p><img src="/2021/06/09/%E7%AC%AC%E4%BA%94%E7%AB%A0Cookie%E4%B8%8ESession/%E7%AC%AC%E4%BA%94%E7%AB%A0%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png" alt="思维导图"></p>
+<h2 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h2><h3 id="Cookie是什么？"><a href="#Cookie是什么？" class="headerlink" title="Cookie是什么？"></a>Cookie是什么？</h3><p>Cookie是由W3C组织提出，最早由netscape社区发展的一种机制<br>网页之间的交互是通过HTTP协议传输数据的，而Http协议是无状态的协议。无状态的协议是什么意思呢？一旦数据提交完后，浏览器和服务器的连接就会关闭，再次交互的时候需要重新建立新的连接。<br>服务器无法确认用户的信息，于是乎，W3C就提出了：给每一个用户都发一个通行证，无论谁访问的时候都需要携带通行证，这样服务器就可以从通行证上确认用户的信息。通行证就是Cookie<br>Cookie的流程：浏览器访问服务器，如果服务器需要记录该用户的状态，就使用response向浏览器发送一个Cookie，浏览器会把Cookie保存起来。当浏览器再次访问服务器的时候，浏览器会把请求的网址连同Cookie一同交给服务器。</p>
+<h3 id="Cookie常见的API"><a href="#Cookie常见的API" class="headerlink" title="Cookie常见的API"></a>Cookie常见的API</h3><p>创建Cookie<br>Cookie cookie = new Cookie(String cookieName,String cookieValue);<br>示例：<br>Cookie userCookie = new Cookie(“username”,”huguidong”)    记录用户名信息。<br>注意：Cookie中不能存储中文</p>
+<p>设置Cookie在客户端的持久化时间<br>cookie.setMaxAge(int seconds):单位秒</p>
+<blockquote>
+<p>0     浏览器会将cookie保存在硬盘上，当超过设置的时间，浏览器会删除这个cookie。<br>&lt;0     缺省值，浏览器会将cookie保存在内存，浏览器只要不关闭，cookie就一直存在；浏览器关闭，cookie就会被销毁。<br>=0     立即删除cookie。<br>示例   cookie.setMaxAge(300);<br>存五分钟 过期删除</p>
+</blockquote>
+<p>设置Cookie的携带路径<br>cookie.setPath(String path)：<br> 如果不设置携带路径，那么该cookie信息会在访问产生该cookie的web资源所在的路径都携带cookie信息</p>
+<p> 删除客户端cookie<br>如果想删除客户端已经存储的cookie信息，就用同名同路径的持久化时间为0的cookie进行覆盖即可。<br>比如，要删除一个名叫”name”的cookie:<br>    Cookie c = new Cookie(“name”,””);<br>    c.setMaxAge(0);<br>    response.addCookie(c);</p>
+<p>向客户端发送cookie<br>response.addCookie(Cookie cookie);<br>cookie只能保存合法的ascii字符，如果是中文，需要将其转换成合法的ascii字符。</p>
+<h2 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h2><h3 id="什么是Session"><a href="#什么是Session" class="headerlink" title="什么是Session?"></a>什么是Session?</h3><p> Session 是另一种记录浏览器状态的机制。不同的是Cookie保存在浏览器中，Session保存在服务器中。用户使用浏览器访问服务器的时候，服务器把用户的信息以某种的形式记录在服务器，这就是Session<br>如果说Cookie是检查用户身上的”通行证“来确认用户的身份，那么Session就是通过检查服务器上的”客户明细表“来确认用户的身份的。Session相当于在服务器中建立了一份“客户明细表”。</p>
+<h3 id="Session-API"><a href="#Session-API" class="headerlink" title="Session API"></a>Session API</h3><p>（1）当一个session第一次被启用时，一个独一的标识被存储于本地的cookie中。</p>
+<p>（2）首先使用session_start()函数，PHP从session仓库中加载已经存储的session变量。</p>
+<p>（3）当执行PHP脚本时，通过使用session_register()函数注册session变量。</p>
+<p>（4）当PHP脚本执行结束时，未被销毁的session变量会被自动保存在本地一定路径下的session库中。</p>
+<h3 id="获得Session对象的方法。"><a href="#获得Session对象的方法。" class="headerlink" title="获得Session对象的方法。"></a>获得Session对象的方法。</h3><p>HttpSession session = request.getSession();</p>
+<h3 id="Session的存取数据-amp-生命周期"><a href="#Session的存取数据-amp-生命周期" class="headerlink" title="Session的存取数据&amp;生命周期"></a>Session的存取数据&amp;生命周期</h3><p>session是域对象<br>Session也能存储数据，有三个方法<br>session.setAttribute(String name,Object obj)<br>session.getAttribute(String name)<br>session.removeAttribute(String name)</p>
+<h3 id="Session的生命周期。"><a href="#Session的生命周期。" class="headerlink" title="Session的生命周期。"></a>Session的生命周期。</h3><p>Session在用户第一次访问服务器Servlet，jsp等动态资源就会被自动创建，Session对象保存在内存里，这也就为什么上面的例子可以直接使用request对象获取得到Session对象。<br>如果访问HTML,IMAGE等静态资源Session不会被创建。<br>Session生成后，只要用户继续访问，服务器就会更新Session的最后访问时间，无论是否对Session进行读写，服务器都会认为Session活跃了一次。<br>由于会有越来越多的用户访问服务器，因此Session也会越来越多。为了防止内存溢出，服务器会把长时间没有活跃的Session从内存中删除，这个时间也就是Session的超时时间。<br>Session的超时时间默认是30分钟。</p>
+<h3 id="Session持久化。"><a href="#Session持久化。" class="headerlink" title="Session持久化。"></a>Session持久化。</h3><p>由于session的创建和获取是取决于Cookie中的JESSIONID决定的，所以如果Cookie被清除掉了，服务器就无法号到对应的session了。</p>
+<h3 id="Session为什么要持久化？"><a href="#Session为什么要持久化？" class="headerlink" title="Session为什么要持久化？"></a>Session为什么要持久化？</h3><p>客户端访问了某个能开启会话功能的资源， web服务器就会创建一个与该客户端对应的HttpSession对象，每个HttpSession对象都要站用一定的内存空间。如果在某一时间段内访问站点的用户很多，web服务器内存中就会积累大量的HttpSession对象，消耗大量的服务器内存，即使用户已经离开或者关闭了浏览器，web服务器仍要保留与之对应的HttpSession对象，在他们超时之前，一直占用web服务器内存资源。</p>
+<h3 id="Session的持久化的作用。"><a href="#Session的持久化的作用。" class="headerlink" title="Session的持久化的作用。"></a>Session的持久化的作用。</h3><p>1.提高服务器内存的利用率，保证那些暂停活动的客户端在会话超时之前继续原来的会话<br>2，在多台web服务器协同对外提供服务的集群系统中，使用Session的持久化技术，某台服务器可以将其中发生改变的Session对象复制给其他服务器。保证了在某台服务器停止工作后可以由其他服务器来接替它与客户端的会话<br>3，在一个web应用程序重启时，服务器也会持久化该应用程序中所有HttpSession对象，保证客户端的会话活动仍可以继续。</p>
+<p>Tomcat使用Session Manager 类来管理Session的持久化，他提供了两个SessionManager类<br>org.apache.catalina.session.StandardManager<br>org.apache.catalina.session.PersistentManager<br>StandardManager是tomcat默认使用的，在web应用程序关闭时，对内存中的所有HttpSession对象进行持久化，把他们保存到文件系统中。默认的存储文件为<br>&lt;tomcat 安装目录&gt;/work/Catalina/&lt;主机名&gt;/&lt;应用程序名&gt;/sessions.ser<br>PersistentManager比StandardManager更为灵活，只要某个设备提供了实现org.apache.catalina.Store接口的驱动类，PersistentManager就可以将HttpSession对象保存到该设备</p>
+<h2 id="学习心得"><a href="#学习心得" class="headerlink" title="学习心得"></a>学习心得</h2><p>这一章学习了Session和Cookie，他们之间还是有区别的，在存储方式上Cookie只能存储字符串，如果要存储非ASCII字符串还要对其编码。Session可以存储任何类型的数据，可以把Session看成是一个容器。还有很多的区别，还没有了解到在后面有时间再来补充。</p>
+<p><em>XMind - Trial Version</em></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/Alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/09/%E7%AC%AC%E4%BA%94%E7%AB%A0Cookie%E4%B8%8ESession/" class="archive-article-date">
-  	<time datetime="2021-06-09T08:57:06.816Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-09</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/09/%E7%AC%AC%E4%BA%94%E7%AB%A0Cookie%E4%B8%8ESession/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/09/%E7%AC%AC%E5%9B%9B%E7%AB%A0SERVLET/" class="archive-article-date">
-  	<time datetime="2021-06-09T06:05:12.125Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-09</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/08/%E7%AC%AC%E4%B8%89%E7%AB%A0HTTP/" class="archive-article-date">
-  	<time datetime="2021-06-08T14:48:24.350Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+  
+    <a href="/2021/06/09/%E7%AC%AC%E5%9B%9B%E7%AB%A0SERVLET/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/08/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" class="archive-article-date">
-  	<time datetime="2021-06-08T14:46:42.322Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/08/%E7%AC%AC%E4%B8%80%E7%AB%A0JAVAWEB%E5%BC%80%E5%8F%91%E6%A6%82%E8%BF%B0/" class="archive-article-date">
-  	<time datetime="2021-06-08T13:23:12.606Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/21/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2021-04-20T16:53:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-21</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/21/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">vim编辑器的基本使用</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -322,8 +341,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
