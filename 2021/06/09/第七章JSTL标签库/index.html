@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021/6 | 胡贵冬的笔记</title>
+  <title>胡贵冬的笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="胡贵冬的笔记">
-<meta property="og:type" content="website">
+  <meta name="description" content="第七章JSTL标签库 EL概念定义EL 表达式语言来自于标准化脚本语言 ECMAScript 和 XPath，EL 表达式简化了 JSP 语言的写法。在 EL 表达式出现之前，开发 Java Web 应用时经常需要将大量的 Java 代码嵌入 JSP 页面中，使页面的可读性变得很差，使用 EL 可以使页面变得很好。 用处提供了在JSP中简化表达式的方法，让JSP的代码更加简化，可以嵌入在JSP页面">
+<meta property="og:type" content="article">
 <meta property="og:title" content="胡贵冬的笔记">
-<meta property="og:url" content="http://example.com/archives/2021/06/index.html">
+<meta property="og:url" content="http://example.com/2021/06/09/%E7%AC%AC%E4%B8%83%E7%AB%A0JSTL%E6%A0%87%E7%AD%BE%E5%BA%93/index.html">
 <meta property="og:site_name" content="胡贵冬的笔记">
-<meta property="og:description" content="胡贵冬的笔记">
+<meta property="og:description" content="第七章JSTL标签库 EL概念定义EL 表达式语言来自于标准化脚本语言 ECMAScript 和 XPath，EL 表达式简化了 JSP 语言的写法。在 EL 表达式出现之前，开发 Java Web 应用时经常需要将大量的 Java 代码嵌入 JSP 页面中，使页面的可读性变得很差，使用 EL 可以使页面变得很好。 用处提供了在JSP中简化表达式的方法，让JSP的代码更加简化，可以嵌入在JSP页面">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/06/09/%E7%AC%AC%E4%B8%83%E7%AB%A0JSTL%E6%A0%87%E7%AD%BE%E5%BA%93/%E7%AC%AC%E4%B8%83%E7%AB%A0%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png">
+<meta property="article:published_time" content="2021-06-09T12:47:03.998Z">
+<meta property="article:modified_time" content="2021-06-09T12:47:03.998Z">
 <meta property="article:author" content="胡贵冬">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/06/09/%E7%AC%AC%E4%B8%83%E7%AB%A0JSTL%E6%A0%87%E7%AD%BE%E5%BA%93/%E7%AC%AC%E4%B8%83%E7%AB%A0%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png">
   
     <link rel="alternative" href="/atom.xml" title="胡贵冬的笔记" type="application/atom+xml">
   
@@ -152,169 +156,155 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-第七章JSTL标签库" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第七章JSTL标签库"><a href="#第七章JSTL标签库" class="headerlink" title="第七章JSTL标签库"></a>第七章JSTL标签库</h1><p><img src="/2021/06/09/%E7%AC%AC%E4%B8%83%E7%AB%A0JSTL%E6%A0%87%E7%AD%BE%E5%BA%93/%E7%AC%AC%E4%B8%83%E7%AB%A0%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png" alt="思维导图"></p>
+<h2 id="EL概念"><a href="#EL概念" class="headerlink" title="EL概念"></a>EL概念</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>EL 表达式语言来自于标准化脚本语言 ECMAScript 和 XPath，EL 表达式简化了 JSP 语言的写法。在 EL 表达式出现之前，开发 Java Web 应用时经常需要将大量的 Java 代码嵌入 JSP 页面中，使页面的可读性变得很差，使用 EL 可以使页面变得很好。</p>
+<h3 id="用处"><a href="#用处" class="headerlink" title="用处"></a>用处</h3><p>提供了在JSP中简化表达式的方法，让JSP的代码更加简化，可以嵌入在JSP页面内部，减少JSP脚本的编写。一般的都是先将数据存储到Session,request,ServletContext等域对象中，再利用EL表达式来获取。</p>
+<h3 id="EL用法"><a href="#EL用法" class="headerlink" title="EL用法"></a>EL用法</h3><p>语法<br>以”${“符号开始，以”}”符号结束，具体格式：<code> $&#123;表达式&#125;</code> 。<br>EL最主要的作用就是获取四大域中的数据，格式：${EL表达式}<br>EL获取四大域中的值加‘ key’<br>EL表达式支持简单的运算符：加减乘除取摸，逻辑运算符。empty运算符（判断是否为null)，三目运算符<br>empty运算符可以判断对象是否为null，用作于流程控制！</p>
+<h2 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h2><p>EL表达式主要是来对内容的显示，为了显示的方便，EL表达式提供了11个内置对象。<br>pageContext    对应于JSP页面中的pageContext对象（注意：取的是pageContext对象）<br>pageScope    代表page域中用于保存属性的Map对象<br>requestScope    代表request域中用于保存属性的Map对象<br>sessionScope    代表session域中用于保存属性的Map对象<br>applicationScope    代表application域中用于保存属性的Map对象<br>param    表示一个保存了所有请求参数的Map对象<br>paramValues表示一个保存了所有请求参数的Map对象，它对于某个请求参数，返回的是一个string[]<br>header    表示一个保存了所有http请求头字段的Map对象<br>headerValues同上，返回string[]数组。<br>cookie    表示一个保存了所有cookie的Map对象<br>initParam    表示一个保存了所有web应用初始化参数的map对象</p>
+<h2 id="JSTL概念"><a href="#JSTL概念" class="headerlink" title="JSTL概念"></a>JSTL概念</h2><p>JSTL全称为 JSP Standard Tag Library 即JSP标准标签库。<br>JSTL作为最基本的标签库，提供了一系列的JSP标签，实现了基本的功能：集合的遍历、数据的输出、字符串的处理、数据的格式化等等！</p>
+<h2 id="为什么要用JSTL"><a href="#为什么要用JSTL" class="headerlink" title="为什么要用JSTL"></a>为什么要用JSTL</h2><p>EL表达式不够完美，需要JSTL的支持！在JSP中，我们前面已经用到了EL表达式，体会到了EL表达式的强大功能：使用EL表达式可以很方便地引用一些JavaBean以及其属性，不会抛出NullPointerException之类的错误！但是，EL表达式非常有限，它不能遍历集合，做逻辑的控制。这时，就需要JSTL的支持了！<br>Scriptlet的可读性，维护性，重用性都十分差！JSTL与HTML代码十分类似，遵循着XML标签语法，使用JSTL让JSP页面显得整洁，可读性非常好，重用性非常高，可以完成复杂的功能！<br>在JSP中不推荐使用scriptlet输出，推荐使用JSP标签。</p>
+<h2 id="使用JSTL标签库步骤"><a href="#使用JSTL标签库步骤" class="headerlink" title="使用JSTL标签库步骤"></a>使用JSTL标签库步骤</h2><p>导入jstl.jar和standard.jar开发包<br>在JSP页面中用taglib指令引入需要用到的JSTL标签</p>
+<h2 id="JSTL标签"><a href="#JSTL标签" class="headerlink" title="JSTL标签"></a>JSTL标签</h2><p>三个标签库<br>core标签库是JSTL的核心标签库，实现了最基本的功能：流程控制、迭代输出等操作！<br>fmt标签库也叫做国际化标签库<br>fn方法库也叫做EL函数库、fn标签库<br>JSTL的core标签标签共13个，使用这些标签能够完成JSP页面的基本功能，减少编码工作。core标签库的前缀一般是c<br>在JSP页面引入核心标签库的代码为：<br>&lt;%@ taglib prefix=”c” uri=”<a target="_blank" rel="noopener" href="http://java.sun.com/jsp/jstl/core&quot;">http://java.sun.com/jsp/jstl/core&quot;</a> %&gt;<br>功能上可以分为4类：表达式控制标签、流程控制标签、循环标签、URL操作标签。<br>1）表达式控制标签：out标签、set标签、remove标签、catch标签。<br>2）流程控制标签：if标签、choose标签、when标签、otherwise标签。<br>3）循环标签：forEach标签、forTokens标签。<br>4）URL操作标签：import标签、url标签、redirect标签、param标签。<br> 详细用法参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_25827845/article/details/53311722">https://blog.csdn.net/qq_25827845/article/details/53311722</a></p>
+<h2 id="学习心得"><a href="#学习心得" class="headerlink" title="学习心得"></a>学习心得</h2><p>本章学习了el和jstl标签库,最后的实验坎坎坷坷的做，也没有完美实现。考完试加强研究一下，争取掌握。如后再来补充。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/Alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/09/%E7%AC%AC%E4%B8%83%E7%AB%A0JSTL%E6%A0%87%E7%AD%BE%E5%BA%93/" class="archive-article-date">
-  	<time datetime="2021-06-09T12:47:03.998Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-09</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/09/%E7%AC%AC%E4%B8%83%E7%AB%A0JSTL%E6%A0%87%E7%AD%BE%E5%BA%93/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/09/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%B7%B1%E5%85%A5JSP%E6%8A%80%E6%9C%AF/" class="archive-article-date">
-  	<time datetime="2021-06-09T12:46:23.722Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-09</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/09/%E7%AC%AC%E4%BA%94%E7%AB%A0Cookie%E4%B8%8ESession/" class="archive-article-date">
-  	<time datetime="2021-06-09T08:57:06.816Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-09</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+  
+    <a href="/2021/06/09/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%B7%B1%E5%85%A5JSP%E6%8A%80%E6%9C%AF/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/09/%E7%AC%AC%E5%9B%9B%E7%AB%A0SERVLET/" class="archive-article-date">
-  	<time datetime="2021-06-09T06:05:12.125Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-09</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/08/%E7%AC%AC%E4%B8%89%E7%AB%A0HTTP/" class="archive-article-date">
-  	<time datetime="2021-06-08T14:48:24.350Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/08/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" class="archive-article-date">
-  	<time datetime="2021-06-08T14:46:42.322Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/08/%E7%AC%AC%E4%B8%80%E7%AB%A0JAVAWEB%E5%BC%80%E5%8F%91%E6%A6%82%E8%BF%B0/" class="archive-article-date">
-  	<time datetime="2021-06-08T13:23:12.606Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -337,8 +327,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

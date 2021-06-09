@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021/6 | 胡贵冬的笔记</title>
+  <title>胡贵冬的笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="胡贵冬的笔记">
-<meta property="og:type" content="website">
+  <meta name="description" content="第六章深入JSP技术 JSP概念什么是JSP？JSP全名为Java Server Pages，java服务器页面。 Servlet和JSP技术的关系Servlet：在java代码中嵌入html代码，更擅长编写java业务代码JSP：在html中潜入java代码，更擅长页面展示 JSP运行原理和过程JSP的工作模式是请求&#x2F;响应模式,客户端首先发出HTTP请求，JSP程序收到后请求后进行处理并返回处理">
+<meta property="og:type" content="article">
 <meta property="og:title" content="胡贵冬的笔记">
-<meta property="og:url" content="http://example.com/archives/2021/06/index.html">
+<meta property="og:url" content="http://example.com/2021/06/09/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%B7%B1%E5%85%A5JSP%E6%8A%80%E6%9C%AF/index.html">
 <meta property="og:site_name" content="胡贵冬的笔记">
-<meta property="og:description" content="胡贵冬的笔记">
+<meta property="og:description" content="第六章深入JSP技术 JSP概念什么是JSP？JSP全名为Java Server Pages，java服务器页面。 Servlet和JSP技术的关系Servlet：在java代码中嵌入html代码，更擅长编写java业务代码JSP：在html中潜入java代码，更擅长页面展示 JSP运行原理和过程JSP的工作模式是请求&#x2F;响应模式,客户端首先发出HTTP请求，JSP程序收到后请求后进行处理并返回处理">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/06/09/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%B7%B1%E5%85%A5JSP%E6%8A%80%E6%9C%AF/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png">
+<meta property="article:published_time" content="2021-06-09T12:46:23.722Z">
+<meta property="article:modified_time" content="2021-06-09T12:46:23.722Z">
 <meta property="article:author" content="胡贵冬">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/06/09/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%B7%B1%E5%85%A5JSP%E6%8A%80%E6%9C%AF/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png">
   
     <link rel="alternative" href="/atom.xml" title="胡贵冬的笔记" type="application/atom+xml">
   
@@ -152,169 +156,225 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-第六章深入JSP技术" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第六章深入JSP技术"><a href="#第六章深入JSP技术" class="headerlink" title="第六章深入JSP技术"></a>第六章深入JSP技术</h1><p><img src="/2021/06/09/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%B7%B1%E5%85%A5JSP%E6%8A%80%E6%9C%AF/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png" alt="思维导图"></p>
+<h2 id="JSP概念"><a href="#JSP概念" class="headerlink" title="JSP概念"></a>JSP概念</h2><h3 id="什么是JSP？"><a href="#什么是JSP？" class="headerlink" title="什么是JSP？"></a>什么是JSP？</h3><p>JSP全名为Java Server Pages，java服务器页面。</p>
+<h3 id="Servlet和JSP技术的关系"><a href="#Servlet和JSP技术的关系" class="headerlink" title="Servlet和JSP技术的关系"></a>Servlet和JSP技术的关系</h3><p>Servlet：在java代码中嵌入html代码，更擅长编写java业务代码<br>JSP：在html中潜入java代码，更擅长页面展示</p>
+<h3 id="JSP运行原理和过程"><a href="#JSP运行原理和过程" class="headerlink" title="JSP运行原理和过程"></a>JSP运行原理和过程</h3><p>JSP的工作模式是请求/响应模式,客户端首先发出HTTP请求，JSP程序收到后请求后进行处理并返回处理结果。在一个JSP文件第一次被请求时，JSP容器把该JSP文件转换成为一个Servlet，而这个容器本身也是一个Servlet。<br> JSP的运行过程具体如下：</p>
+<ol>
+<li>客户端发出请求，请求访问JSP文件。</li>
+<li>JSP容器先将JSP文件转换成一个Java源文件（Java Servlet源程序），在转换过程中，如果发现JSP文件中存在任何语法错误，则中断转换过程，并向服务端和客户端返回出错信息。</li>
+<li>如果转换成功，则JSP容器将生成的Java源文件编译成相应的字节码文件*.class。该class文件就是一个Servlet，Servlet容器会像处理其他Servlet一样来处理它。</li>
+</ol>
+<h2 id="脚本及注释"><a href="#脚本及注释" class="headerlink" title="脚本及注释"></a>脚本及注释</h2><h3 id="JSP脚本"><a href="#JSP脚本" class="headerlink" title="JSP脚本"></a>JSP脚本</h3><p>&lt;%Java代码%&gt;—-内部的java代码翻译到service方法的内部<br>&lt;%=Java变量或表达式%&gt;—-会被翻译成service方法内部的out.print()<br>&lt;%!Java代码%&gt;—-会被翻译成servlet的成员变量，存在线程安全问题，不建议使用</p>
+<h3 id="JSP注释"><a href="#JSP注释" class="headerlink" title="JSP注释"></a>JSP注释</h3><p>JSP是需要先编译成.java，再编译成.class的。其中&lt;%– … –%&gt;中的内容在JSP编译成.java时会被忽略的，即JSP注释。</p>
+<p>也可以在JSP页面中使用html注释：<!-- … -->，但这个注释在JSP编译成的.java中是存在的，它不会被忽略，而且会被发送到客户端浏览器。但是在浏览器显示服务器发送过来的html时，因为<!-- … -->是html的注释，所以浏览器是不会显示它的。</p>
+<p>&lt;%@ page language=”java” contentType=”text/html; charset=UTF-8”<br>    pageEncoding=”UTF-8”%&gt;<br><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"></p>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   <!--这是HTML注释-->
+   <% 单行注释 *多行注释* int i="100;" system.out.print(i); %>
+   <%--jsp注释 --%>
+   <%=i %>
+   <%! string str="aaaaaaaaaa" ; %>
+   <%=str %>
+</%=str></%!></%=i></%--jsp注释></%></body>
+</html>
+
+
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><h3 id="JSP三大指令"><a href="#JSP三大指令" class="headerlink" title="JSP三大指令"></a>JSP三大指令</h3><ul>
+<li><p>Page指令</p>
+<p> PAGE可以定义在整个 JSP 页面范围有效的属性和相关的功能。利用 page 指令，可以指定脚本语言，导入需要的类，指明输出内容的类型，指定处理异常的错误页面，以及指定页面输出缓存的大小，还可以一次设置多个属性。</p>
+<p>[language=”java”]         语言种类<br>[contentType=”mimeType[ ;charset=CHARSET ]”]        字符编码<br>[import=”{package.class|package.*},…”]        导入程序中要用到的包或类<br>[info=”text”]        设置 JSP 页面的相关信息<br>[extends=”package.class”]        指定将 JSP 页面转换为 Servlet 后继承的类<br>[session=”true|false”]        表示当前页面是否支持 session<br>[errorPage=”relativeURL”]        用于指定JSP文件的相对路径</p>
+</li>
+<li><p>Include指令</p>
+<p>   &lt;%@ include file=”被包含的文件地址” %&gt;<br>   需避免情况：使用 include 指令是以静态方式包含文件，也就是说，被包含文件将原封不动地插入 JSI 文件中，因此，在所包含的文件中不能使用 <html></html>、<body></body> 标记，否则会因为与原有的 JSP 文件有相同标记而产生错误。另外，因为原文件和被包含文件可以相互访问彼此定义的变量和方法，所以要避免变量和方法在命名上产生冲突。</p>
+</li>
+<li><p>Taglib指令</p>
+<p>用于在 JSP 页面中导入标签库（JSP 标准标签库、第三方标签库、自定义标签库）。<br>&lt;%@ tablib uri=”标签库的地址” prefix=”前缀” %&gt;</p>
+</li>
+</ul>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><h3 id="什么是JSP标签？"><a href="#什么是JSP标签？" class="headerlink" title="什么是JSP标签？"></a>什么是JSP标签？</h3><p>JSP标签用来控制JSP的行为，执行一些常用的JSP页面动作，通过标签可以实现很多行java代码才能实现的功能，比如请求转发的功能。</p>
+<h3 id="常用的JSP标签"><a href="#常用的JSP标签" class="headerlink" title="常用的JSP标签"></a>常用的JSP标签</h3><p>jsp的常用标签有以下三个<br><a href="jsp:include">jsp:include</a>标签<br><a href="jsp:forward">jsp:forward</a>标签<br><a href="jsp:param">jsp:param</a>标签</p>
+<p>JSP include<br>nclude 动作用于把另外一个文件的输出内容插入当前 JSP 页面的输出内容中，这种在 JSP 页面执行时引入的方式称为动态引入，这样，主页面程序与被包含文件是彼此独立的，互不影响。被包含的文件可以是一个动态文件（JSP 文件），也可以是一个静态文件（如文本文件）。<br>&lt;jsp:include page=”relativeURL | &lt;%=expressicry%&gt;” /&gt;<br>page 属性指定了被包含文件的路径，其值可以是一个代表相对路径的表达式。当路径以“/”开头时，将在当前应用程序的根目录下查找文件；如果是以文件名或文件夹名开头，将在当前页面的目录下查找文件。书写此动作标记时，“jsp”和“:”以及“include”三者之间不要有空格，否则会出错。</p>
+<p>JSP param动作<br>当使用 <a href="jsp:include">jsp:include</a> 动作标记引入的是一个能动态执行的程序时，如 Servlet 或 JSP 页面，可以通过使用 <a href="jsp:param">jsp:param</a> 动作标记向这个程序传递参数信息。<br>&lt;jsp:include page=”relativeURL | &lt;%=expression%&gt;”&gt;<br>&lt;jsp:param name=”pName1” value=”pValue1 | &lt;%=expression1%&gt;” /&gt;<br>&lt;jsp:param name=”pName2” value=”pValue2 | &lt;%=expression2%&gt;” /&gt;<br>…<br><br><a href="jsp:param">jsp:param</a> 动作的 name 属性用于指定参数名，value 属性用于指定参数值。在 <a href="jsp:include">jsp:include</a> 动作标记中，可以使用多个 <a href="jsp:param">jsp:param</a> 传递参数。另外，<a href="jsp:forward">jsp:forward</a> 和 <a href="jsp:plugin">jsp:plugin</a> 动作标记中都可以利用 <a href="jsp:param">jsp:param</a> 传递参数。</p>
+<p>JSP forward动作<br>在大多数的网络应用程序中，都有这样的情况：在用户成功登录后转向欢迎页面，此处的“转向”，就是跳转。<a href="jsp:forward">jsp:forward</a> 动作标记就可以实现页面的跳转，用来将请求转到另外一个 JSP、HTML 或相关的资源文件中。当 <a href="jsp:forward">jsp:forward</a> 动作标记被执行后，当前的页面将不再被执行，而是去执行该标记指定的目标页面，但是，用户此时在地址栏中看到的仍然是当前网页的地址，而内容却已经是转向的目标页面了。<br>&lt;jsp:forward page=”relativeURL” | “&lt;%=expression %&gt;” /&gt;<br>forward 动作执行后，当前页面将不再被执行，而是去执行指定的目标页面。<br>转向到的文件可以是 HTML 文件、JSP 文件、程序段，或者其他能够处理 request 对象的文件。</p>
+<h2 id="九大隐式"><a href="#九大隐式" class="headerlink" title="九大隐式"></a>九大隐式</h2><p>request对象<br>request对象是javax.servlet.http.HttpServletRequest对象的一个实例。每当客户端请求页面时，JSP引擎将创建一个新对象来表示该请求。<br>request对象提供了获取包括表单数据，Cookie，HTTP方法等HTTP头信息的方法。 response对象<br>response对象是javax.servlet.http.HttpServletResponse对象的一个实例。就像服务器创建request对象一样，它还创建一个对象来表示对客户端的响应。<br>response对象还定义了处理创建新HTTP头的接口。通过此对象，JSP程序员可以添加新的Cookie或日期戳，HTTP状态代码等。 </p>
+<p>out对象<br>out隐式对象是javax.servlet.jsp.JspWriter对象的一个实例，用于在响应中发送内容。<br>初始化JspWriter对象根据页面是否缓存而不同地实例化。缓冲可以通过使用page指令的buffered =’false’属性来关闭。<br>JspWriter对象包含与java.io.PrintWriter类大部分相同的方法。但是，JspWriter还有一些额外的方法用来处理缓冲。与PrintWriter对象不同，JspWriter会抛出IOExceptions异常。 </p>
+<p>session对象<br>session对象是javax.servlet.http.HttpSession的一个实例，其行为与Java Servlet下的会话对象行为完全相同。<br>session对象用于跟踪客户端请求之间的客户端会话。 </p>
+<p>application对象<br>application对象是生成的Servlet的ServletContext对象的直接包装，实际上是javax.servlet.ServletContext对象的一个实例。<br>application对象是JSP页面在其整个生命周期中的表示。 当JSP页面被初始化时，将创建此对象，并且在JSP页面被jspDestroy()方法删除时application对象也将被删除。<br>通过向application对象添加属性值，可以确保组成Web应用程序的所有JSP文件都可以访问它。 </p>
+<p>config对象<br>config对象是javax.servlet.ServletConfig的实例化，是生成的servlet的ServletConfig对象周围的直接包装。 </p>
+<p>pageContext对象<br>pageContext对象是javax.servlet.jsp.PageContext对象的一个实例。pageContext对象用于表示整个JSP页面。 </p>
+<p>page对象<br>page对象是对该页面实例的实际引用。可以认为它是表示整个JSP页面的对象。<br>page对象是this对象的直接同义词。</p>
+<p>exception对象<br>exception对象是一个包含上一页抛出的异常的包装器。它通常用于生成对错误条件的适当响应。</p>
+<h2 id="PageContext详解"><a href="#PageContext详解" class="headerlink" title="PageContext详解"></a>PageContext详解</h2><p>pageContext 是页面上下文对象，这个特殊的对象提供了 JSP 程序执行时所需要用到的所有属性和方法，如 session、application、config、out 等对象的属性，也就是说，它可以访问本页所有的 session，也可以取本页所在的 application 的某一属性值，它相当于页面中所有其他对象功能的集大成者，可以用它访问本页中所有的其他对象。</p>
+<p>pageContext 对象是 javax.servlet:jsp.pageContext 类的一个实例，它的创建和初始化都是由容器来完成的，JSP 页面里可以直接使用 pageContext 对象的句柄，pageContext 对象的 getXxx()、setXxx() 和 findXxx() 方法可以根据不同的对象范围实现对这些对象的管理。</p>
+<p>getAttribute(String name)：取得page范围内的name属性。 </p>
+<p>setAttribute(String name,值,int scope)：如果没有指定scope，该属性默认在page范围内，如：pageContext.setAttribute(“page”,”hello”);  </p>
+<p>使用pageContext将属性设置在request范围中pageContext.setAttribute(“request2”,”hello” , pageContext.REQUEST_SCOPE);  </p>
+<p>使用pageContext将属性设置在session范围中pageContext.setAttribute(“session2”,”hello” , pageContext.SESSION_SCOPE); </p>
+<p>使用pageContext将属性设置在application范围中pageContext.setAttribute(“app2”,”hello” , pageContext.APPLICATION_SCOPE);    </p>
+<p>getAttribute(String name,int scope)：取得指定范围内的name属性，</p>
+<p>其中scope可以是如下4个值：</p>
+<p> PageContext.PAGE_SCOPE：对应于page范围。 </p>
+<p> PageContext.REQUEST_SCOPE：对应于request范围。 </p>
+<p> PageContext.SESSION_SCOPE：对应于session范围。 </p>
+<p> PageContext.APPLICATION_SCOPE：对应于application范围。</p>
+<p>JSP中四个作用域<br>所谓“作用域”就是“信息共享的范围”，也就是说一个信息能够在多大的范围内有效。<br>JSP中九个内置对象及其相应所属作用域如下表：<br>￼</p>
+<p>pageContext域：当前jsp页面范围<br>request域：一次请求<br>session域：一次会话<br>application域：整个web应用</p>
+<h2 id="JSP中四个作用域"><a href="#JSP中四个作用域" class="headerlink" title="JSP中四个作用域"></a>JSP中四个作用域</h2><p>page范围：只在一个页面保留数据（javax.servlet.jsp.PageContext(抽象类)）<br>request范围：只在一个请求中保存数据（javax.servlet.httpServletRequest）<br>Session范围：在一次会话中保存数据，仅供单个用户使用(javax.servlet.http.HttpSession)<br>Application范围：在整个服务器中保存数据，全部用户共享(javax.servlet.ServletContext)</p>
+<h2 id="学习心得"><a href="#学习心得" class="headerlink" title="学习心得"></a>学习心得</h2><p>这一章节的知识点比较多，是在是记不住，需要这些知识的时候再回来复习，里面有一些细节忽略了，需要再补充。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/Alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/09/%E7%AC%AC%E4%B8%83%E7%AB%A0JSTL%E6%A0%87%E7%AD%BE%E5%BA%93/" class="archive-article-date">
-  	<time datetime="2021-06-09T12:47:03.998Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-09</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/09/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%B7%B1%E5%85%A5JSP%E6%8A%80%E6%9C%AF/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/09/%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%B7%B1%E5%85%A5JSP%E6%8A%80%E6%9C%AF/" class="archive-article-date">
-  	<time datetime="2021-06-09T12:46:23.722Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-09</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/09/%E7%AC%AC%E4%BA%94%E7%AB%A0Cookie%E4%B8%8ESession/" class="archive-article-date">
-  	<time datetime="2021-06-09T08:57:06.816Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-09</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2021/06/09/%E7%AC%AC%E4%B8%83%E7%AB%A0JSTL%E6%A0%87%E7%AD%BE%E5%BA%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/06/09/%E7%AC%AC%E4%BA%94%E7%AB%A0Cookie%E4%B8%8ESession/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/09/%E7%AC%AC%E5%9B%9B%E7%AB%A0SERVLET/" class="archive-article-date">
-  	<time datetime="2021-06-09T06:05:12.125Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-09</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/08/%E7%AC%AC%E4%B8%89%E7%AB%A0HTTP/" class="archive-article-date">
-  	<time datetime="2021-06-08T14:48:24.350Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/08/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" class="archive-article-date">
-  	<time datetime="2021-06-08T14:46:42.322Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/08/%E7%AC%AC%E4%B8%80%E7%AB%A0JAVAWEB%E5%BC%80%E5%8F%91%E6%A6%82%E8%BF%B0/" class="archive-article-date">
-  	<time datetime="2021-06-08T13:23:12.606Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -337,8 +397,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
