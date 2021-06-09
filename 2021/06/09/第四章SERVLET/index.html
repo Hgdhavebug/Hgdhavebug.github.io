@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | 胡贵冬的笔记</title>
+  <title>胡贵冬的笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="胡贵冬的笔记">
-<meta property="og:type" content="website">
+  <meta name="description" content="第四章SERVLET Servlet概念什么是Servlet?Servlet，全称Java Servlet，是用Java编写的服务器端程序,用来处理客户端发送过来的请求，并对该请求做出响应。狭义的Servlet是指Java语言实现的一个接口，广义的Servlet是指任何实现了这个Servlet接口的类，一般情况下，人们将Servlet理解为后者。Servlet是Java Web的核心类，是Java">
+<meta property="og:type" content="article">
 <meta property="og:title" content="胡贵冬的笔记">
-<meta property="og:url" content="http://example.com/archives/index.html">
+<meta property="og:url" content="http://example.com/2021/06/09/%E7%AC%AC%E5%9B%9B%E7%AB%A0SERVLET/index.html">
 <meta property="og:site_name" content="胡贵冬的笔记">
-<meta property="og:description" content="胡贵冬的笔记">
+<meta property="og:description" content="第四章SERVLET Servlet概念什么是Servlet?Servlet，全称Java Servlet，是用Java编写的服务器端程序,用来处理客户端发送过来的请求，并对该请求做出响应。狭义的Servlet是指Java语言实现的一个接口，广义的Servlet是指任何实现了这个Servlet接口的类，一般情况下，人们将Servlet理解为后者。Servlet是Java Web的核心类，是Java">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/06/09/%E7%AC%AC%E5%9B%9B%E7%AB%A0SERVLET/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png">
+<meta property="article:published_time" content="2021-06-09T06:02:38.774Z">
+<meta property="article:modified_time" content="2021-06-09T06:02:38.774Z">
 <meta property="article:author" content="胡贵冬">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/06/09/%E7%AC%AC%E5%9B%9B%E7%AB%A0SERVLET/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png">
   
     <link rel="alternative" href="/atom.xml" title="胡贵冬的笔记" type="application/atom+xml">
   
@@ -152,133 +156,194 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-第四章SERVLET" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第四章SERVLET"><a href="#第四章SERVLET" class="headerlink" title="第四章SERVLET"></a>第四章SERVLET</h1><p><img src="/2021/06/09/%E7%AC%AC%E5%9B%9B%E7%AB%A0SERVLET/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png" alt="思维导图"></p>
+<h2 id="Servlet概念"><a href="#Servlet概念" class="headerlink" title="Servlet概念"></a>Servlet概念</h2><h3 id="什么是Servlet"><a href="#什么是Servlet" class="headerlink" title="什么是Servlet?"></a>什么是Servlet?</h3><p>Servlet，全称Java Servlet，是用Java编写的服务器端程序,用来处理客户端发送过来的请求，并对该请求做出响应。<br>狭义的Servlet是指Java语言实现的一个接口，广义的Servlet是指任何实现了这个Servlet接口的类，一般情况下，人们将Servlet理解为后者。<br>Servlet是Java Web的核心类，是Java Web三大组件之一（Servlet、Filter、Listener)。</p>
+<h3 id="Servlet的生命周期。"><a href="#Servlet的生命周期。" class="headerlink" title="Servlet的生命周期。"></a>Servlet的生命周期。</h3><p>Servlet从创建到销毁的过程。<br>用户第一次访问Servlet的时候，服务器会创建一个Servlet的实例，那么Servlet中init方法就会执行，任何一次请求服务器都会创建一个新的线程访问Servlet中的service的方法，在service方法内部根据请求的方式的不同调用doXxx的方法(get请求调用doGet,post请求调用doPost)。当Servlet从服务器中移除掉，或者关闭服务器，Servlet的实例就会被销毁，那么destroy方法就会执行。</p>
+<h3 id="Servlet理解"><a href="#Servlet理解" class="headerlink" title="Servlet理解"></a>Servlet理解</h3><p>在发送数据时，我们通常将浏览器称为客户端，通过链接访问的地址称为服务器端，Java是通过Socket以及ServletSocket对象按照HTTP协议来控制数据的发送与接收的，但是，发送以及接收的数据都是流数据，需要对其进行各种解析后才能获取到各种有价值的信息，于是JDK就又发明了HttpServlet来应对这一问题。对Socket进一步封装，将解析流的方法全部实现好，这样子用户要发送数据或者接收数据的时候直接调用HttpServlet里面的方法就可以进行了，而且也可直接采用HttpServlet里面定义好的方法来解析数据。</p>
+<h2 id="HttpServletRequest请求对象"><a href="#HttpServletRequest请求对象" class="headerlink" title="HttpServletRequest请求对象"></a>HttpServletRequest请求对象</h2><h3 id="什么是HttpServletRequest？"><a href="#什么是HttpServletRequest？" class="headerlink" title="什么是HttpServletRequest？"></a>什么是HttpServletRequest？</h3><p> 在Servlet的API中，定义了一个HttpServletRequest接口，它继承自ServletRequest接口，专门用于封装HTTP的请求，由于HTTP请求包含着请求行、请求头和请求体三部分，因此，在HttpServletRequest中分别定义了接受请求行、请求头和请求体的相关方法。</p>
+<h3 id="获取请求行的方法。"><a href="#获取请求行的方法。" class="headerlink" title="获取请求行的方法。"></a>获取请求行的方法。</h3><p>getRequestURL方法返回客户端发出请求时的完整URL。<br>getRequestURI方法返回请求行中的资源名部分。<br>getQueryString 方法返回请求行中的参数部分。<br>getRemoteAddr方法返回发出请求的客户机的IP地址<br>getRemotePort方法返回客户机所使用的网络端口号<br>getLocalAddr方法返回WEB服务器的IP地址。<br>getMethod得到客户机请求方式</p>
+<h3 id="获取请求头方法。"><a href="#获取请求头方法。" class="headerlink" title="获取请求头方法。"></a>获取请求头方法。</h3><p> getHeader(String name)：以 String 的形式返回指定请求头的值。<br>getIntHeader(String name)：获取客户端请求中对应的头信息，如果不存在指定的 header 名，则返回 -1。<br>getHeaderNames()：返回此请求包含的所有头名称的枚举。</p>
+<h3 id="获取请求参数。"><a href="#获取请求参数。" class="headerlink" title="获取请求参数。"></a>获取请求参数。</h3><p>getParameter(String name)：根据 name 获取请求参数的值。<br>getParameterMap()：返回的是一个 Map 类型的值，该返回值记录着客户端所提交的请求参数和请求参数值的映射关系。</p>
+<h2 id="HttpServletResponse响应对象"><a href="#HttpServletResponse响应对象" class="headerlink" title="HttpServletResponse响应对象"></a>HttpServletResponse响应对象</h2><h3 id="HttpServletResponse理解"><a href="#HttpServletResponse理解" class="headerlink" title="HttpServletResponse理解"></a>HttpServletResponse理解</h3><p>与 HttpServletRequest 相反，HttpServletResponse 对象是专门用来封装 HTTP 响应消息的。客户端发出了请求，得对人家有所回应，HttpServletResponse 就是做这项工作的。</p>
+<h3 id="发送响应行方法。"><a href="#发送响应行方法。" class="headerlink" title="发送响应行方法。"></a>发送响应行方法。</h3><p>setStatus(int status)；<br>sendError(int code)：该方法用于发送表示错误信息的状态码</p>
+<h3 id="发送响应头方法。"><a href="#发送响应头方法。" class="headerlink" title="发送响应头方法。"></a>发送响应头方法。</h3><p>addHeader(String name,String value)：有多个值，可以重复写。<br>setHeader(String name,String value)：只有一个值的响应头。<br>addIntHeader(String name,int value)和setIntHeader(String name int value)：将value值为int的字段加入到响应头中<br>setContentLength()：用来设置HTTP响应消息的内容大小，单位：字节<br>setContenType(String type)：设置Servlet输出内容的类型。</p>
+<h2 id="ServletConfig对象"><a href="#ServletConfig对象" class="headerlink" title="ServletConfig对象"></a>ServletConfig对象</h2><h3 id="什么是ServletConfig？"><a href="#什么是ServletConfig？" class="headerlink" title="什么是ServletConfig？"></a>什么是ServletConfig？</h3><p>ServletConfig是Tomcat服务器创建的一个对象，作用是保存与Servlet程序相关的配置信息。<br>每次Tomcat服务器创建Servlet程序时，都会创建一个对应的ServletConfig对象，并且调用init()方法，将该对象初始化。<br>一个Servlet对象只有一个对应的ServletConfig对象，当前Servlet不能访问另一个Servlet的ServletConfig对象。</p>
+<h3 id="ServletConfig方法"><a href="#ServletConfig方法" class="headerlink" title="ServletConfig方法"></a>ServletConfig方法</h3><p>getInitParameter(String name)：通过name获取value<br>getInitParameterNames()：获取所有初始化参数的名字<br>getServletContext()：获取ServletContext [Servlet上下文] 对象。<br>getServletName()：获取<servlet-name>servletname</servlet-name></p>
+<h3 id="ServletConfig到底是什么"><a href="#ServletConfig到底是什么" class="headerlink" title="ServletConfig到底是什么"></a>ServletConfig到底是什么</h3><p>ServletConfig是一个Servlet对象的配置信息对象,ServletConfig对象中封装了一个Servlet对象的置信息。Servlet对象的配置信息到web.xml文件中。<br> 一个Servlet对象对应一个ServletConfig对象,100个Servlet对象对应100个ServletConfig对象。</p>
+<h2 id="第一个Servlet"><a href="#第一个Servlet" class="headerlink" title="第一个Servlet"></a>第一个Servlet</h2><h3 id="创建一个类继承HTTPServlet"><a href="#创建一个类继承HTTPServlet" class="headerlink" title="创建一个类继承HTTPServlet"></a>创建一个类继承HTTPServlet</h3><p>选择doGet、doPost方法，选确定</p>
+<h3 id="配置web-xml"><a href="#配置web-xml" class="headerlink" title="配置web.xml"></a>配置web.xml</h3><servlet>
+<servlet-name>HelloServlet</servlet-name> <servlet-class>com.ceit.servlet.HelloServlet</servlet-class> </servlet>
+<servlet-mapping> <servlet-name>HelloServlet</servlet-name> <url-pattern>/hello</url-pattern>
+
+</servlet-mapping>
+其中<servlet>是用来注册Servlet的
+内部的<servlet-name>是servlet的名称，在当前配置文件中必须唯一
+内部的<servlet-class>是servlet实现类的类名，类名要包含package名称
+
+
+<h3 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h3><p>右上角绿色小三角启动<br>浏览器访问localhost:8080/hello<br>返回idea查看 contest 是否输出 收到get请求</p>
+<h2 id="ServletContext对象"><a href="#ServletContext对象" class="headerlink" title="ServletContext对象"></a>ServletContext对象</h2><h3 id="什么是ServletContext？"><a href="#什么是ServletContext？" class="headerlink" title="什么是ServletContext？"></a>什么是ServletContext？</h3><p>Servlet上下文对象，该对象表示当前web应用环境信息，可以获取整个web环境的信息 </p>
+<h3 id="获取ServletContext对象"><a href="#获取ServletContext对象" class="headerlink" title="获取ServletContext对象"></a>获取ServletContext对象</h3><p>通过ServletConfig的getServletContext()方法可以得到ServletContext对象<br>HttpServlet中直接通过this.getServletContext()获取</p>
+<h3 id="ServletContext是一个域对象（重要-重要-重要）"><a href="#ServletContext是一个域对象（重要-重要-重要）" class="headerlink" title="ServletContext是一个域对象（重要 重要 重要）"></a>ServletContext是一个域对象（重要 重要 重要）</h3><p>什么是域对象？什么是域？<br>存储数据的区域就是域对象<br>ServletContext域对象的作用范围：整个web应（所有的web资源都可以随意向 servletcontext域中存取数据，数据可以共享）</p>
+<h2 id="Servlet之间的跳转"><a href="#Servlet之间的跳转" class="headerlink" title="Servlet之间的跳转"></a>Servlet之间的跳转</h2><h3 id="Forward"><a href="#Forward" class="headerlink" title="Forward"></a>Forward</h3><ul>
+<li><p>要点</p>
+<p>转向是通过RequestDispatcher对象的forward（）方法来实现的。RequestDispatcher可以通过HttpServletRequest的getRequestDispatcher()方法获得。getRequestDispatcher（）方法的参数必须以“/”开始。Forward不仅可以跳转到本应用的另一个Servlet、JSP页面，也可以跳转到另一个文件，甚至WEB-INF文件夹下的文件。</p>
+</li>
+<li><p>方法</p>
+<p> RequestDispatcher对象<br>可以通过request.getRequestDispatcher()方法获取<br>调用这个对象的forward方法就可以实现请求转发<br>request本身也是一个域对象，reques可以携带数据传递给其他web资源，作用域范围是当前请求<br>setAttribute方法<br>getAttribute方法<br>removeAttribute方法<br>getAttributeNames方法</p>
+</li>
+</ul>
+<h3 id="Redirect"><a href="#Redirect" class="headerlink" title="Redirect"></a>Redirect</h3><ul>
+<li><p>要点</p>
+<p>重定向是利用服务器返回的状态码来实现的。客户端浏览器请求服务器的时候，服务器端会返回一个状态码。服务器端通过HttpServletResponse的setStatus（）方法设置状态码。</p>
+</li>
+<li><p>状态码</p>
+<p>1xx    信息状态码。表示该请求已经被接受，正在被处理。<br>2xx    正确状态码。表示该请求已经被正确接收并处理，没有错误等发生。例如：200表示一切正确。<br>3xx    重定向状态码。例如301（永久性重定向），302（零时性重定向）表示该资源已经不存在或者换了地址，客户端需要重新定向到一个新的资源。服务器响应中会附带这个新资源地址。<br>4xx    请求错误。例如401表示没有权限访问，404表示资源不存在，405表示访问方式错误（如Servlet只接受GET，POST方式访问但是客户端却以DELETE方式访问）<br>5xx    服务器错误。例如500表示程序出现异常而中途停止运行。</p>
+</li>
+</ul>
+<h2 id="Servlet线程安全"><a href="#Servlet线程安全" class="headerlink" title="Servlet线程安全"></a>Servlet线程安全</h2><h3 id="Servlet线程池"><a href="#Servlet线程池" class="headerlink" title="Servlet线程池"></a>Servlet线程池</h3><p>Tomcat内部有一个线程池，如果这个servlet的访 问量很大，一下子有100个人，全部过来了，tomcat 不会帮我们new出100个HelloWorldServlet的对象出来的，自始至终，这个对象只有一个，这个对象会提前准备出若干个线程，但是让一个 线程跑起来，是有开销的，有时开销我们都会感觉出来的，因为线程比较耗时，所以，让线程提前跑起来，这些跑起来的线程组成一个线程池。</p>
+<h3 id="如何解决Servlet线程安全？"><a href="#如何解决Servlet线程安全？" class="headerlink" title="如何解决Servlet线程安全？"></a>如何解决Servlet线程安全？</h3><p>如果某个Servlet实现了SingleThreadModel接口，那么Servlet引擎将以单线程模式来调用其service方法。但是本质上面并没有解决线程安全问题，因为其采用的方式是根据并发请求去产生多个Servlet实例对象，并发的每个线程分别调用一个独立的Servlet实例对象，而真正意义上解决多线程安全问题是指一个Servlet实例对象被多个线程同时调用的问题。而不是多个线程调用多个Servlet实例。<br>利用synchronized同步代码，将我们有并发问题的代码转化为同步代码，但是这样做的一个坏处就是，如果遇到高并发的情况下，我们的用户可能会因为同步代码的问题而造成等待的时间比较久这样的问题，所以，要慎用。<br>减少引起并发问题的资源代码，从根本上解决Servlet线程安全问题，其实，造成Servlet线程的问题好多都是因为变量设置不正确造成的，我们应该尽可能去避免这样的问题。</p>
+<h2 id="学习心得"><a href="#学习心得" class="headerlink" title="学习心得"></a>学习心得</h2><p>这一章节变得难了，开始了解代码的编写，方法的使用，发现问题，了解问题和解决问题的过程还是很难的，中间做了四次实验，到现在也没有完全理解学会，还是有报错，希望接下来能解决并理解。</p>
+<p><em>XMind - Trial Version</em></p>
+</servlet-class></servlet-name></servlet>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/Alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/09/%E7%AC%AC%E5%9B%9B%E7%AB%A0SERVLET/" class="archive-article-date">
-  	<time datetime="2021-06-09T06:02:38.774Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-09</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/09/%E7%AC%AC%E5%9B%9B%E7%AB%A0SERVLET/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/08/%E7%AC%AC%E4%B8%89%E7%AB%A0HTTP/" class="archive-article-date">
-  	<time datetime="2021-06-08T14:48:24.350Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/08/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" class="archive-article-date">
-  	<time datetime="2021-06-08T14:46:42.322Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+  
+    <a href="/2021/06/08/%E7%AC%AC%E4%B8%89%E7%AB%A0HTTP/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/08/%E7%AC%AC%E4%B8%80%E7%AB%A0JAVAWEB%E5%BC%80%E5%8F%91%E6%A6%82%E8%BF%B0/" class="archive-article-date">
-  	<time datetime="2021-06-08T13:23:12.606Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-08</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/21/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2021-04-20T16:53:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-21</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/21/vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">vim编辑器的基本使用</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -301,8 +366,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
